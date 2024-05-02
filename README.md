@@ -5,7 +5,7 @@
 
 
 ## | Resumo | 
- #### O aplicativo auto tem como objetivo propor à automatização e organização de pedidos em filas de lanchonete.... Ele irá fazer isso gerando informações como : 
+ #### O aplicativo tem como objetivo propor à automatização e organização de pedidos em filas de lanchonete.... Ele irá propor tudo isso gerando informações como : 
  #### 1- Número do pedido. 
  #### 2- Informações sobre o pedido.
  #### 3- Preço total do pedido. 
