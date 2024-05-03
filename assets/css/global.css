@@ -1,0 +1,14 @@
+.container{
+  background-color: gray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+.item{
+  flex-basis: 80px ;
+  border: solid black 1px;
+}
+
+.main{
+  flex-grow: 2;
+}
