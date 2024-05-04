@@ -1,14 +1,37 @@
-.container{
-  background-color: gray;
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+:root {
+
+  /*STYLE COLORS*/
+  --backgraund-primary: #F0F8FF;
+  --color-primary: #4D3EFC;
+  --color-segundary: #8C83ED;
+
+  /*STYLE COLORS DARK*/
+  --backgraund-primary-dark: #1F1717;
+  --color-primary-dark: #F0F8FF;
+  --color-segundary-dark: #8C83ED;
+
+  /*FONTS TEXT*/
+  --font-default: 'Tilt Warp', sans-serif;
+
+}
+
+
+
+.container {
+  background-color: var(--backgraund-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-} 
-.item{
-  flex-basis: 80px ;
-  border: solid black 1px;
 }
 
-.main{
+.item {
+  flex-basis: 80px;
+  /*border: solid black 1px;*/
+}
+
+.main {
   flex-grow: 2;
+  font-family: Arial, Helvetica, sans-serif;
 }
