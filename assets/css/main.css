@@ -1,12 +1,26 @@
 .options{
-  height: 60vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 120px;
 }
 .option{
   border: solid black 1px;
-  width: 100px;
-  height: 80px;
+  flex-basis: 220px;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+}
+.sum{ 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:905px){
+   .option{
+     margin-top:2rem ;
+   }
 }
