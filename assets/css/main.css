@@ -7,16 +7,42 @@
   gap: 120px;
 }
 .option{
-  border: solid black 1px;
-  flex-basis: 220px;
-  height: 280px;
+  box-shadow: 4px 4px 4px #333;
+  border-radius: 20px;
+  flex-basis: 280px;
+  height: 480px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;  
+}
+
+.coxinha{
+  border-radius: 20px;
+  height: 280px;
+  background-image: url('/assets/img/coxinha.jpg');
+  background-size: cover;
+}
+.kib{
+  border-radius: 20px;
+  background-image: url('/assets/img/kib.jpg');
+  background-size: cover;
+  height: 280px;
+  
+}
+.bolinho-queijo{
+  border-radius: 20px;
+  background-image: url('/assets/img/bolo-queijo.jpg');
+  background-size: cover;
+  height: 280px;
+  
 }
 .sum{ 
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.sum h1{
+  border: solid black 2px;
+  
 }
 
 @media (max-width:905px){
