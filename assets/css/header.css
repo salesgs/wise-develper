@@ -19,3 +19,11 @@
     width: 500px;
     height: auto;
 }
+
+@media (max-width:905px){
+    .logo {
+        width: 400px;
+        height: auto;
+    }
+ }
+ 

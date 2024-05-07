@@ -1,4 +1,4 @@
-.options{
+.options {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -6,47 +6,76 @@
   flex-wrap: wrap;
   gap: 120px;
 }
-.option{
-  box-shadow: 4px 4px 4px #333;
+
+.option {
   border-radius: 20px;
-  flex-basis: 280px;
+  flex-basis: 285px;
   height: 480px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.58); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer;
 }
 
-.coxinha{
+.option:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.747);  
+}
+
+
+.coxinha {
   border-radius: 20px;
   height: 280px;
-  background-image: url('/assets/img/coxinha.jpg');
+  background-image: url('/assets/img/coxinha.png');
   background-size: cover;
+  background-position: center;
 }
-.kib{
+
+.kib {
   border-radius: 20px;
-  background-image: url('/assets/img/kib.jpg');
-  background-size: cover;
   height: 280px;
-  
+  background-image: url('/assets/img/Quibe.png');
+  background-size: cover;
+  background-position: center;
 }
-.bolinho-queijo{
+
+.bolinho-queijo {
   border-radius: 20px;
-  background-image: url('/assets/img/bolo-queijo.jpg');
-  background-size: cover;
   height: 280px;
-  
+  background-image: url('/assets/img/bolinha-de-queijo.png');
+  background-size: cover;
+  background-position: center;
 }
-.sum{ 
+
+.informations{
+  margin-left: 10px;
+  color: var(--color-primary);
+}
+
+.sum {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.sum h1{
-  border: solid black 2px;
+
+.sum h1 {
+ color:var(--color-primary);
+}
+
+.increment {
+  border-radius: 20px;
+  height: 50px;
+ 
+}
+.decrement {
+  border-radius: 20px;
+  height: 50px;
   
 }
 
-@media (max-width:905px){
-   .option{
-     margin-top:2rem ;
-   }
+@media (max-width:905px) {
+  .option {
+    margin-top: 2rem;
+  }
 }
