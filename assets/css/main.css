@@ -8,6 +8,7 @@
   gap: 120px;
   margin-top: 20px;
   background-image:url(/assets/img/interior-do-restaurante.jpg);
+ 
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -29,7 +30,6 @@
   transform: translateY(-3px); 
   box-shadow: 0 5px 10px rgba(245, 245, 245, 0.747);  
 }
-
 
 .coxinha {
   border-radius: 20px;
@@ -83,8 +83,6 @@
   text-transform: uppercase;
 }
 
-
-
 .increment, .decrement {
   border-radius: 20px;
   height: 50px;
@@ -107,8 +105,12 @@
 .btn_next{
   display: flex;
   justify-content: right;
+  margin-top: 20px;
   padding-top: 50px;
   padding-right: 50px;
+  background-color: var(--color-primary);
+  height: 18vh
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
@@ -120,8 +122,10 @@
     text-decoration: none;
     font-family:  "Roboto", sans-serif;
     font-size: 40px;
-    color: white;
-    background: var(--color-primary);
+    color: var(--color-black);
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: var(--background-secundary);
     transition: 1s;
     box-shadow: 6px 6px 0 var(--color-segundary);
     transform: skewX(-15deg);
@@ -133,7 +137,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 #FBC638;
+    box-shadow: 10px 10px 0 var( --bacgrkound-orange);
 }
 
 .cta span:nth-child(2) {
@@ -190,7 +194,7 @@ path.two {
         fill: white;
     }
     50% {
-        fill: #FBC638;
+        fill: var( --bacgrkound-orange);
     }
     100% {
         fill: white;
@@ -202,3 +206,4 @@ path.two {
     margin-top: 2rem;
   }
 }
+

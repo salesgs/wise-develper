@@ -1,8 +1,5 @@
 @import url('global.css');
 
-.header {
-    padding-top: 20px;
-}
 
 .logo_menu {
     background-color: var(--color-primary);
