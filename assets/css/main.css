@@ -1,10 +1,16 @@
 .options {
-  height: 100vh;
+  height:auto;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 120px;
+  margin-top: 20px;
+  background-image:url(/assets/img/interior-do-restaurante.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
 }
 
 .option {
@@ -16,11 +22,12 @@
   box-shadow: 0 2px 4px rgba(77, 77, 77, 0.58); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   cursor: pointer;
+  background-color: var(--backgraund-primary);
 }
 
 .option:hover {
   transform: translateY(-3px); 
-  box-shadow: 0 8px 12px rgba(95, 95, 95, 0.747);  
+  box-shadow: 0 5px 10px rgba(245, 245, 245, 0.747);  
 }
 
 
