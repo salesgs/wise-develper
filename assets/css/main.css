@@ -13,14 +13,14 @@
   height: 480px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.58); 
+  box-shadow: 0 2px 4px rgba(77, 77, 77, 0.58); 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   cursor: pointer;
 }
 
 .option:hover {
   transform: translateY(-3px); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.747);  
+  box-shadow: 0 8px 12px rgba(95, 95, 95, 0.747);  
 }
 
 
@@ -50,7 +50,8 @@
 
 .informations{
   margin-left: 10px;
-  color: var(--color-primary);
+  color: var(--color-segundary);
+  font-family: var(--font-default);
 }
 
 .sum {
@@ -60,7 +61,7 @@
 }
 
 .sum h1 {
- color:var(--color-primary);
+ color:var(--color-segundary);
 }
 
 .increment {
