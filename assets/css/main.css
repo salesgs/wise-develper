@@ -61,8 +61,22 @@
 }
 
 .sum h1 {
- color:var(--color-segundary);
+ color:var(--color-segundary); 
+ font-weight: 600;
+ font-family:  "Roboto", sans-serif;
+
 }
+.informations h2{
+  font-weight: 500;
+  font-family:  "Roboto", sans-serif;
+}
+.informations h3{
+  font-weight: 400;
+  font-family:  "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+
 
 .increment {
   border-radius: 20px;
