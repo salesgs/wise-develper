@@ -1,15 +1,5 @@
- const imgsDecrement = document.querySelectorAll(".decrement");
- 
- imgsDecrement.forEach((element)=>{
-  element.addEventListener("click",function(){
-    alert("Pegou - ");
-  });
- });
+import incrementKib from "./index.js";
+const incrementKibImg = document.getElementById("incrementKibImg");
 
- 
- const imgsIncrement = document.querySelectorAll(".increment");
- imgsIncrement.forEach( (element) =>{
-   element.addEventListener("click",function(){
-    alert("Pegou o +");
-   });
- });
+//A CADA CLICK UMA INCREMENTAÇÃO NO NÚMERO
+incrementKibImg.addEventListener("click",incrementKib);
