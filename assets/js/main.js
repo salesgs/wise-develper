@@ -12,6 +12,7 @@ const incrementKibImg = document.getElementById("incrementKibImg");
 const decrementKibImg = document.getElementById("decrementKibImg");
 decrementKibImg.addEventListener("click",decrementKib);
 incrementKibImg.addEventListener("click",incrementKib);
+//----------------------------------------------------------
 
 // Coxinha
 const incrementCoxinhaImg = document.getElementById("incrmenetCoxinha");
@@ -24,7 +25,7 @@ decrementCoxinhaImg.addEventListener("click", decrementCoxinha);
 // Queijo
 const incrementQueijoImg = document.getElementById("incrmentQueijoImg");
 const decrementQueijoImg = document.getElementById("decrementQueijoImg");
-//----------------------------------------------------------
 
 incrementQueijoImg.addEventListener("click",incrmentQueijo);
 decrementQueijoImg.addEventListener("click",decrementQueijo)
+//----------------------------------------------------------
