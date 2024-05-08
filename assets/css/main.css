@@ -137,7 +137,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 var( --bacgrkound-orange);
+    box-shadow: 10px 10px 0 var( --bacgrkound-green);
 }
 
 .cta span:nth-child(2) {
@@ -191,13 +191,13 @@ path.two {
 
 @keyframes color_anim {
     0% {
-        fill: white;
+        fill: var(--color-primary);
     }
     50% {
-        fill: var( --bacgrkound-orange);
+        fill: var( --bacgrkound-green);
     }
     100% {
-        fill: white;
+        fill: var(--color-primary);
     }
 }
 
