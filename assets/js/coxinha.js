@@ -6,8 +6,7 @@ export function incrementCoxinha(){
     let number = parseFloat(numberString);//CONVERSÃO DO TEXTO DO H1 PARA NUMÉRO
     const unitValue = 0.50;
     let formattedUnitValue = unitValue.toFixed(2);
-    let formattedTotalValue = (unitValue * number).toFixed(2);
-    formattedTotalValue = number === 1 ? unitValue.toFixed(2) : (unitValue * number).toFixed(2);//ATRIBUINDO O VALOR QUANDO CLICK E DADO UMA VEZ
+    let formattedTotalValue = number === 1 ? unitValue.toFixed(2) : (unitValue * number).toFixed(2);//ATRIBUINDO O VALOR QUANDO CLICK E DADO UMA VEZ
     h1.innerText = `${number + 1}`;//SOMA A CADA CLICK
     number++; //INCREMENTNADO O VALOR DE NUMBER
     formattedTotalValue = (unitValue * number).toFixed(2); // RECALCULANDO O VALOR TOTAL
