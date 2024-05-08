@@ -11,3 +11,4 @@ export function decrementCoxinha(){
   let number = new Number(numberString);//CONVERSÃO DO TEXTO DO H1 PARA NUMÉRO
   h1.innerText =   number == 0 ? `${0}`: ` ${number - 1} `;
 }
+
