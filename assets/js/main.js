@@ -25,8 +25,6 @@ decrementCoxinhaImg.addEventListener("click", decrementCoxinha);
 // Queijo
 const incrementQueijoImg = document.getElementById("incrmentQueijoImg");
 const decrementQueijoImg = document.getElementById("decrementQueijoImg");
-//----------------------------------------------------------
 
 incrementQueijoImg.addEventListener("click",incrmentQueijo);
-decrementQueijoImg.addEventListener("click",decrementQueijo);
-//----------------------------------------------------------
+decrementQueijoImg.addEventListener("click",decrementQueijo)
