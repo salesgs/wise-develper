@@ -1,17 +1,13 @@
 .options {
-  height:auto;
-  padding: 20px;
+  height: auto;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 120px;
-  margin-top: 20px;
-  background-image:url(/assets/img/interior-do-restaurante.jpg);
- 
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
 }
 
 .option {
@@ -20,15 +16,15 @@
   height: 480px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px rgba(77, 77, 77, 0.58); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 2px 4px rgba(77, 77, 77, 0.58);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: var(--backgraund-primary);
 }
 
 .option:hover {
-  transform: translateY(-3px); 
-  box-shadow: 0 5px 10px rgba(245, 245, 245, 0.747);  
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(245, 245, 245, 0.747);
 }
 
 .coxinha {
@@ -55,7 +51,7 @@
   background-position: center;
 }
 
-.informations{
+.informations {
   margin-left: 10px;
   color: var(--color-segundary);
   font-family: var(--font-default);
@@ -68,137 +64,226 @@
 }
 
 .sum h1 {
- color:var(--color-segundary); 
- font-weight: 600;
- font-family:  "Roboto", sans-serif;
+  color: var(--color-segundary);
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
 
 }
-.informations h2{
+
+.informations h2 {
   font-weight: 500;
-  font-family:  "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.informations h3{
+
+.informations h3 {
   font-weight: 400;
-  font-family:  "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
 }
 
-.increment, .decrement {
+.increment,
+.decrement {
   border-radius: 20px;
   height: 50px;
 }
 
 /* Adicionando efeito de clique */
-.increment, .decrement {
-  transition: transform 0.2s ease; /* Adicionando uma transição suave */
+.increment,
+.decrement {
+  transition: transform 0.2s ease;
+  /* Adicionando uma transição suave */
 }
 
-.increment:hover, .decrement:hover {
-  transform: scale(1.1); /* Aumenta ligeiramente o tamanho do botão quando o mouse está sobre ele */
+.increment:hover,
+.decrement:hover {
+  transform: scale(1.1);
+  /* Aumenta ligeiramente o tamanho do botão quando o mouse está sobre ele */
 }
 
-.increment:active, .decrement:active {
-  transform: scale(0.9); /* Reduz ligeiramente o tamanho do botão quando está pressionado */
+.increment:active,
+.decrement:active {
+  transform: scale(0.9);
+  /* Reduz ligeiramente o tamanho do botão quando está pressionado */
 }
 
 
-.btn_next{
+.btn_next {
   display: flex;
   justify-content: right;
-  margin-top: 20px;
   padding-top: 50px;
   padding-right: 50px;
   background-color: var(--color-primary);
   height: 18vh
-
 }
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
-
-
 .cta {
-    display: flex;
-    padding: 10px 45px;
-    text-decoration: none;
-    font-family:  "Roboto", sans-serif;
-    font-size: 40px;
-    color: var(--color-black);
-    font-weight: 800;
-    text-transform: uppercase;
-    background-color: var(--background-secundary);
-    transition: 1s;
-    box-shadow: 6px 6px 0 var(--color-segundary);
-    transform: skewX(-15deg);
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: var(--font-default);
+  font-size: 40px;
+  color: var(--color-black);
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: var(--backgraund-primary);
+  transition: 1s;
+  box-shadow: 6px 6px 0 var(--color-segundary);
+  transform: skewX(-15deg);
 }
 
 .cta:focus {
-   outline: none; 
+  outline: none;
 }
 
 .cta:hover {
-    transition: 0.5s;
-    box-shadow: 10px 10px 0 var( --bacgrkound-green);
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 var(--bacgrkound-green);
 }
 
 .cta span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 0px;
+  transition: 0.5s;
+  margin-right: 0px;
 }
 
-.cta:hover  span:nth-child(2) {
-    transition: 0.5s;
-    margin-right: 45px;
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
 }
 
-  span {
-    transform: skewX(15deg) 
-  }
+span {
+  transform: skewX(15deg)
+}
 
-  span:nth-child(2) {
-    width: 20px;
-    margin-left: 30px;
-    position: relative;
-    top: 12%;
-  }
-  
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
 /**************SVG****************/
 
 path.one {
-    transition: 0.4s;
-    transform: translateX(-60%);
+  transition: 0.4s;
+  transform: translateX(-60%);
 }
 
 path.two {
-    transition: 0.5s;
-    transform: translateX(-30%);
+  transition: 0.5s;
+  transform: translateX(-30%);
 }
 
 .cta:hover path.three {
-    animation: color_anim 1s infinite 0.2s;
+  animation: color_anim 1s infinite 0.2s;
 }
 
 .cta:hover path.one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
 }
 
 .cta:hover path.two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
 }
 
 /* SVG animations */
 
 @keyframes color_anim {
-    0% {
-        fill: var(--color-primary);
-    }
-    50% {
-        fill: var( --bacgrkound-green);
-    }
-    100% {
-        fill: var(--color-primary);
-    }
+  0% {
+    fill: var(--color-primary);
+  }
+
+  50% {
+    fill: var(--bacgrkound-green);
+  }
+
+  100% {
+    fill: var(--color-primary);
+  }
+}
+
+.janela_modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000083;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffffff9; 
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px #00000098;
+  padding: 20px;
+  z-index: 1000;
+}
+
+
+/* Adicionando uma animação quando a modal é exibida */
+.modal.show {
+  opacity: 1;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 20px; 
+}
+
+.loading div {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-primary); 
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 1.5s infinite ease-in-out alternate;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loading div:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.mensagem_loading {
+  color: var(--color-primary); 
+  font-family:var(--font-default);
+  margin-bottom: 10px; 
 }
 
 @media (max-width:905px) {
@@ -206,4 +291,3 @@ path.two {
     margin-top: 2rem;
   }
 }
-

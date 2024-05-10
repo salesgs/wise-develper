@@ -4,7 +4,7 @@
 
   /*STYLE COLORS*/
   --backgraund-primary: #F0F8FF;
-  --background-secundary:#fefefe;
+  --background-secundary:#035ac5;
   --color-primary: #4D3EFC;
   --color-segundary: #363636;
   /*STYLE COLORS DARK*/
@@ -15,18 +15,31 @@
   --color-segundary-dark: #8C83ED;
 
   /*FONTS TEXT*/
-  --font-default: 'Tilt Warp', sans-serif;
+  --font-default: "Roboto", sans-serif;
 
 }
 
-
-
 .container {
-  background-color: var(--backgraund-primary);
+  position: relative; /* Adiciona posicionamento relativo para conter o pseudo-elemento */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
+.container::before {
+  content: ""; /* Adiciona um conteúdo vazio ao pseudo-elemento */
+  position: absolute; /* Posiciona o pseudo-elemento sobre a área do .container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/img/interior-do-restaurante.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Aplica o efeito de desfoque apenas na imagem de fundo */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo do .container */
+}
+
 
 .item {
   flex-basis: 80px;

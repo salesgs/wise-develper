@@ -1,5 +1,8 @@
 @import url('global.css');
 
+header{
+   margin: 20px;
+}
 
 .logo_menu {
     background-color: var(--color-primary);

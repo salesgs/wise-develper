@@ -4,8 +4,8 @@ import  { decrementKib } from  "./kib.js";
 import {incrementCoxinha} from "./coxinha.js";
 import { decrementCoxinha } from "./coxinha.js";
 import incrmentQueijo from "./queijo.js";
-
 import { decrementQueijo } from "./queijo.js";
+import { activeLoadingModal } from "./modalRedirecionamento.js";
 
 // KIB
 const incrementKibImg = document.getElementById("incrementKibImg");
@@ -27,4 +27,11 @@ const incrementQueijoImg = document.getElementById("incrmentQueijoImg");
 const decrementQueijoImg = document.getElementById("decrementQueijoImg");
 
 incrementQueijoImg.addEventListener("click",incrmentQueijo);
-decrementQueijoImg.addEventListener("click",decrementQueijo)
+decrementQueijoImg.addEventListener("click",decrementQueijo);
+//----------------------------------------------------------
+
+//Modal btn Proximo
+const modalLodding = document.getElementById("buttonNext");
+
+modalLodding.addEventListener("click", activeLoadingModal);
+
