@@ -1,3 +1,16 @@
+import { arrayPriceCoxinha } from "./totalPedidos.js";
+
+//ORIENTAÇÃO OBJETO
+class Coxinha {
+  priceCoxinha;
+  setPriceCoxinha(price){
+   this.priceCoxinha = price;
+   arrayPriceCoxinha.push(this.priceCoxinha);
+   
+  }
+
+}
+
 export function incrementCoxinha() {
   const h1 = document.getElementById("number-coxinha");
   const h2 = document.getElementById("valor-coxinha");
@@ -12,6 +25,9 @@ export function incrementCoxinha() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   
+  let coxinhaPrice = new Coxinha();
+  coxinhaPrice.setPriceCoxinha(formattedTotalValue);
+   
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
     
@@ -24,6 +40,7 @@ export function incrementCoxinha() {
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
+ 
 }
 
 export function decrementCoxinha() {

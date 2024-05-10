@@ -1,3 +1,15 @@
+import { arrayPriceKib } from "./totalPedidos.js";
+
+class Kib{
+    priceKib;
+    
+    setPriceKib(price){
+        this.setPriceKib = price;
+        arrayPriceKib.push(this.setPriceKib);
+    }
+
+}
+
 export default function incrementKib() {
     /**
      * @version "1.0"
@@ -17,8 +29,10 @@ export default function incrementKib() {
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
-
-   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
+ 
+    let kibPrice = new Kib();
+    kibPrice.setPriceKib(formattedTotalValue);
+    //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
   let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
   let numberCoxina = new Number(numberStringCoxinha);

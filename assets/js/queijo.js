@@ -1,3 +1,14 @@
+import { arrayPriceQueijo } from "./totalPedidos.js";
+
+class Queijo{
+  price;
+
+  setPriceQueijo(price){
+    this.price = price;
+  }
+}
+
+
 export default function incrmentQueijo() {
   const h1 = document.getElementById("number-queijo");
   const h2 = document.getElementById("valor-queijo");
@@ -12,6 +23,8 @@ export default function incrmentQueijo() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
 
+   let queijoPrice = new Queijo();
+   queijoPrice.setPriceQueijo(formattedTotalValue);
    //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
   let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
