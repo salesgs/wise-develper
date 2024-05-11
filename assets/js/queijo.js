@@ -1,4 +1,4 @@
-import { arrayPriceQueijo } from "./totalPedidos.js";
+import { arrayPriceQueijo } from "./statusPedido.js";
 
 class Queijo{
   price;

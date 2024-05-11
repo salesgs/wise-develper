@@ -1,4 +1,4 @@
-import { arrayPriceCoxinha } from "./totalPedidos.js";
+import { arrayPriceCoxinha } from "./statusPedido.js";
 
 //ORIENTAÇÃO OBJETO
 class Coxinha {
@@ -25,9 +25,24 @@ export function incrementCoxinha() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   
+  
+  
+  // SOMA VALOR TOTAL
+  let h1Total = document.getElementById("valor-total").innerText;
+  
+  let totalCoxinha = parseFloat(formattedTotalValue);
+  let numberTotal = parseInt(h1Total.innerText);
+  numberTotal+=totalCoxinha; //soma
+  console.log(numberTotal);
+  h1Total.innerText = `R$: ${numberTotal.toFixed(2)}`;
+ //===============================
+ 
+
   let coxinhaPrice = new Coxinha();
   coxinhaPrice.setPriceCoxinha(formattedTotalValue);
    
+
+
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
     

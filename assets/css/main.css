@@ -107,14 +107,7 @@
 }
 
 
-.btn_next {
-  display: flex;
-  justify-content: right;
-  padding-top: 50px;
-  padding-right: 50px;
-  background-color: var(--color-primary);
-  height: 18vh
-}
+
 
 .cta {
   display: flex;

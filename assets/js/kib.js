@@ -1,14 +1,13 @@
-import { arrayPriceKib } from "./totalPedidos.js";
+import { arrayPriceKib } from "./statusPedido.js";
 
 class Kib{
     priceKib;
-    
     setPriceKib(price){
         this.setPriceKib = price;
         arrayPriceKib.push(this.setPriceKib);
     }
-
 }
+
 
 export default function incrementKib() {
     /**
@@ -29,7 +28,17 @@ export default function incrementKib() {
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
- 
+   
+    
+    // SOMA VALOR TOTAL
+    let h1Total = document.getElementById("valor-total");
+    let totalKib = parseFloat(formattedTotalValue);
+    let numberTotal = parseInt(h1Total.innerText.match("0"));
+    numberTotal+=totalKib; //soma
+    console.log(numberTotal);
+    h1Total.innerText = `R$: ${numberTotal.toFixed(2)}`;
+   //===============================
+   
     let kibPrice = new Kib();
     kibPrice.setPriceKib(formattedTotalValue);
     //VALIDAÇÃO PARA LIBERAR O BOTÃO 
@@ -43,7 +52,6 @@ export default function incrementKib() {
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
-
 
 
 }

@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  flex-direction: row-reverse;   
+  padding-top: 50px;
+  justify-content: space-between;
+ 
+  background-color: var(--color-primary);
+  height: 18vh;
+  width: 100%;
+
+}
+.wrapper a{
+  margin-right: 2.5rem;
+}
+
+.total{
+  border: solid black 2px;
+  width: 300px;
+  height: 3.5rem;
+  margin-left: 2.5rem;
+}
