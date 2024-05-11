@@ -1,5 +1,6 @@
 import { arrayPriceKib } from "./statusPedido.js";
-
+import { sumValueTotalCoxinha } from "./coxinha.js";
+import { sumValueTotalQueijo } from "./queijo.js";
 class Kib{
     priceKib;
     setPriceKib(price){
@@ -28,32 +29,26 @@ export default function incrementKib() {
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
-   
     
-    // SOMA VALOR TOTAL
-    let h1Total = document.getElementById("valor-total");
-    let totalKib = parseFloat(formattedTotalValue);
-    let numberTotal = parseInt(h1Total.innerText.match("0"));
-    numberTotal+=totalKib; //soma
-    console.log(numberTotal);
-    h1Total.innerText = `R$: ${numberTotal.toFixed(2)}`;
-   //===============================
+        //===============================
    
-    let kibPrice = new Kib();
-    kibPrice.setPriceKib(formattedTotalValue);
+ let kibPrice = new Kib();
+ kibPrice.setPriceKib(formattedTotalValue);
     //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
   let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
-  let numberCoxina = new Number(numberStringCoxinha);
+  let numberCoxihna = new Number(numberStringCoxinha);
   
   let numberStringQueijo = document.getElementById("number-queijo").innerText;
   let numberQueijo  = new Number(numberStringQueijo);
-  if(numberKib>0 || numberCoxina || numberQueijo > 0){
+  if(numberKib>0 || numberCoxihna >0 || numberQueijo > 0){
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
 
-
+ // SOMA VALOR TOTAL
+ sumValueTotalKib();
+ 
 }
 
 export function decrementKib() {
@@ -85,4 +80,19 @@ if((numberKib==0 && numberCoxihna == 0 ) && ( numberQueijo == 0)){
  button.style.display="none";
 }
 
+}
+
+export function sumValueTotalKib(){
+    
+    const h1ValorTotal = document.getElementById("total-valor-kib").innerText;
+    let valorNumber = parseFloat(h1ValorTotal.slice(9));
+     
+    const totalCoxinha = sumValueTotalCoxinha(); //EXCUTA
+    const totalQueijo = sumValueTotalQueijo(); //
+
+    const total =  (valorNumber+totalCoxinha + totalQueijo);
+    const h1 = document.getElementById("valor-total");
+    h1.innerText=`${total.toFixed(2)}`;
+ return total;
+   
 }

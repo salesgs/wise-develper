@@ -1,5 +1,6 @@
 import { arrayPriceCoxinha } from "./statusPedido.js";
-
+import {sumValueTotalKib} from "./kib.js";
+import {sumValueTotalQueijo} from "./queijo.js"
 //ORIENTAÇÃO OBJETO
 class Coxinha {
   priceCoxinha;
@@ -16,46 +17,31 @@ export function incrementCoxinha() {
   const h2 = document.getElementById("valor-coxinha");
   const h3 = document.getElementById("total-valor-coxinha");
   let numberString = h1.innerText;//Armazenando a o Texto do H1  => "String"
+  
   let numberCoxinha = parseInt(numberString);//CONVERSÃO DO TEXTO DO H1 PARA NUMÉRO
   const unitValue = 0.50;//PREÇO DA PEÇA
   let formattedUnitValue = unitValue.toFixed(2);//FORMATANDO O VALOR
-  h1.innerText = `${numberCoxinha + 1}`;//SOMA A CADA CLICK
-  numberCoxinha++; //INCREMENTNADO O VALOR DE NUMBER
+  numberCoxinha++;
+  h1.innerText = `${numberCoxinha}`;//SOMA A CADA CLICK
   let formattedTotalValue = numberCoxinha === 1 ? unitValue.toFixed(2) : (unitValue * numberCoxinha).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   
-  
-  
-  // SOMA VALOR TOTAL
-  let h1Total = document.getElementById("valor-total").innerText;
-  
-  let totalCoxinha = parseFloat(formattedTotalValue);
-  let numberTotal = parseInt(h1Total.innerText);
-  numberTotal+=totalCoxinha; //soma
-  console.log(numberTotal);
-  h1Total.innerText = `R$: ${numberTotal.toFixed(2)}`;
- //===============================
- 
-
-  let coxinhaPrice = new Coxinha();
+   let coxinhaPrice = new Coxinha();
   coxinhaPrice.setPriceCoxinha(formattedTotalValue);
-   
-
-
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
-  // Validação para liberar o botão
     
   let numberStringQueijo = document.getElementById("number-queijo").innerText;
   let numberStringKib  = document.getElementById("number-kib").innerText;
     
   let numberQueijo  = new Number(numberStringQueijo);
   let numberKib = new Number(numberStringKib);
-  if(numberKib>0 || numberCoxinha || numberQueijo > 0){
+  if(numberKib>0 || numberCoxinha>0 || numberQueijo>0){
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
- 
+  sumValueTotalCoxinha();
+
 }
 
 export function decrementCoxinha() {
@@ -84,4 +70,17 @@ export function decrementCoxinha() {
    let button = document.getElementById("buttonNext");
    button.style.display="none";
   }
+}
+
+export function sumValueTotalCoxinha(){
+  const h1ValorTotal = document.getElementById("total-valor-coxinha").innerText;
+  let valorNumber = parseFloat(h1ValorTotal.slice(9));
+   
+   const totalKib = sumValueTotalKib();
+   const totalQueijo = sumValueTotalQueijo();
+   const total = (valorNumber + totalKib + totalQueijo);
+   h1ValorTotal.innerText =`${total.toFixed(2)}`;
+
+  return valorNumber;
+
 }
