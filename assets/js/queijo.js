@@ -1,10 +1,12 @@
 import { arrayPriceQueijo } from "./statusPedido.js";
+import { sumValues } from "./sumTotal.js";
 
 class Queijo{
   price;
 
   setPriceQueijo(price){
     this.price = price;
+    arrayPriceQueijo.push(this.price);
   }
 }
 
@@ -22,24 +24,21 @@ export default function incrmentQueijo() {
   let formattedTotalValue = numberQueijo === 1 ? unitValue.toFixed(2) : (unitValue * numberQueijo).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
-  sumValueTotalQueijo();
-   let queijoPrice = new Queijo();
-   queijoPrice.setPriceQueijo(formattedTotalValue);
-   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
+  
+  sumValues();
+  let queijoPrice = new Queijo();
+  queijoPrice.setPriceQueijo(formattedTotalValue);
+  //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   // Validação para liberar o botão
   let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
   let numberCoxinha = new Number(numberStringCoxinha);
   let numberStringKib  = document.getElementById("number-kib").innerText;
   let numberKib = new Number(numberStringKib);
-  
-  
-  
+
   if(numberKib>0 || numberCoxinha > 0|| numberQueijo > 0){
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
-
-
 }
 
 export function decrementQueijo() {
@@ -77,9 +76,3 @@ if((numberKib==0 && numberCoxinha == 0 ) && ( numberQueijo == 0)){
 
 }
 
-export function sumValueTotalQueijo(){
-  const h1ValorTotal = document.getElementById("total-valor-queijo").innerText;
-  let valorNumber = parseFloat(h1ValorTotal.slice(9));
-  return valorNumber;
- 
-}

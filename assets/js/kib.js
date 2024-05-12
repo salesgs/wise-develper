@@ -1,6 +1,5 @@
 import { arrayPriceKib } from "./statusPedido.js";
-import { sumValueTotalCoxinha } from "./coxinha.js";
-import { sumValueTotalQueijo } from "./queijo.js";
+import {sumValues} from "./sumTotal.js";
 class Kib{
     priceKib;
     setPriceKib(price){
@@ -29,7 +28,7 @@ export default function incrementKib() {
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
-    
+    sumValues();
         //===============================
    
  let kibPrice = new Kib();
@@ -46,8 +45,6 @@ export default function incrementKib() {
    button.style.display="block";
   }
 
- // SOMA VALOR TOTAL
- sumValueTotalKib();
  
 }
 
@@ -82,17 +79,3 @@ if((numberKib==0 && numberCoxihna == 0 ) && ( numberQueijo == 0)){
 
 }
 
-export function sumValueTotalKib(){
-    
-    const h1ValorTotal = document.getElementById("total-valor-kib").innerText;
-    let valorNumber = parseFloat(h1ValorTotal.slice(9));
-     
-    const totalCoxinha = sumValueTotalCoxinha(); //EXCUTA
-    const totalQueijo = sumValueTotalQueijo(); //
-
-    const total =  (valorNumber+totalCoxinha + totalQueijo);
-    const h1 = document.getElementById("valor-total");
-    h1.innerText=`${total.toFixed(2)}`;
- return total;
-   
-}

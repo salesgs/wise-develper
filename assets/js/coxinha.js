@@ -1,6 +1,5 @@
 import { arrayPriceCoxinha } from "./statusPedido.js";
-import {sumValueTotalKib} from "./kib.js";
-import {sumValueTotalQueijo} from "./queijo.js"
+import {sumValues}from "./sumTotal.js";
 //ORIENTAÇÃO OBJETO
 class Coxinha {
   priceCoxinha;
@@ -26,8 +25,8 @@ export function incrementCoxinha() {
   let formattedTotalValue = numberCoxinha === 1 ? unitValue.toFixed(2) : (unitValue * numberCoxinha).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
-  
-   let coxinhaPrice = new Coxinha();
+  sumValues();
+  let coxinhaPrice = new Coxinha();
   coxinhaPrice.setPriceCoxinha(formattedTotalValue);
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
     
@@ -40,7 +39,6 @@ export function incrementCoxinha() {
    let button = document.getElementById("buttonNext");
    button.style.display="block";
   }
-  sumValueTotalCoxinha();
 
 }
 
@@ -72,15 +70,3 @@ export function decrementCoxinha() {
   }
 }
 
-export function sumValueTotalCoxinha(){
-  const h1ValorTotal = document.getElementById("total-valor-coxinha").innerText;
-  let valorNumber = parseFloat(h1ValorTotal.slice(9));
-   
-   const totalKib = sumValueTotalKib();
-   const totalQueijo = sumValueTotalQueijo();
-   const total = (valorNumber + totalKib + totalQueijo);
-   h1ValorTotal.innerText =`${total.toFixed(2)}`;
-
-  return valorNumber;
-
-}
