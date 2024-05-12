@@ -1,6 +1,6 @@
 import { arrayPriceKib } from "./statusPedido.js";
 import {sumValues} from "./sumTotal.js";
-import { subractionValues } from "./sumTotal.js";
+// import { subractionValues } from "./sumTotal.js";
 class Kib{
     priceKib;
     setPriceKib(price){
@@ -63,8 +63,8 @@ export function decrementKib() {
     let formattedTotalValue = numberKib == -1 ? totalValulenot : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
-  subractionValues();
-   
+//   subractionValues();
+   sumValues();
 // VALIDAÇÃO BOTÃO 
 
 let numberStringCoxinha= document.getElementById("number-coxinha").innerText;

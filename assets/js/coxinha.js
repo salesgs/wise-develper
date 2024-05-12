@@ -1,6 +1,6 @@
 import { arrayPriceCoxinha } from "./statusPedido.js";
 import {sumValues}from "./sumTotal.js";
-import { subractionValues } from "./sumTotal.js";
+// import { subractionValues } from "./sumTotal.js";
 //ORIENTAÇÃO OBJETO
 class Coxinha {
   priceCoxinha;
@@ -58,7 +58,8 @@ export function decrementCoxinha() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
 
-  subractionValues();
+  // subractionValues();
+  sumValues();
   let numberStringQueijo = document.getElementById("number-queijo").innerText;
   
   let numberQueijo  = new Number(numberStringQueijo);
