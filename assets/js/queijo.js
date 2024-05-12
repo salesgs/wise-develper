@@ -1,5 +1,6 @@
 import { arrayPriceQueijo } from "./statusPedido.js";
 import { sumValues } from "./sumTotal.js";
+import { subractionValues } from "./sumTotal.js";
 
 class Queijo{
   price;
@@ -55,7 +56,7 @@ export function decrementQueijo() {
   let formattedTotalValue = number == -1 ? totalValulenot : (unitValue * number).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
-
+  subractionValues();
   // VALIDAÇÃO BOTÃO 
 
 let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
