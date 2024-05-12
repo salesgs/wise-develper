@@ -14,8 +14,17 @@
 }
 
 .total{
-  border: solid black 2px;
   width: 300px;
-  height: 3.5rem;
+  height: 4.5rem;
   margin-left: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: var(--font-default);
+  color: var(--color-black);
+  background-color: var(--backgraund-primary);
+  box-shadow: 6px 6px 0 var(--color-segundary);
+}
+#valor-total{
+ margin-left: 10px;
+
 }

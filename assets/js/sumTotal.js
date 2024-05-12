@@ -14,7 +14,7 @@ export function sumValues(){
  const h1Total = document.getElementById("valor-total");
  const totalValue  = valorKib + valorCoxinha + valorQueijo;
  
- h1Total.innerText=`Total: R$ ${totalValue.toFixed(2)}`;
+ h1Total.innerText=`Total R$: ${totalValue.toFixed(2)}`;
 }
 
 
