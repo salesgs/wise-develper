@@ -3,17 +3,10 @@
 :root {
 
   /*STYLE COLORS*/
-  --backgraund-primary: #F0F8FF;
-  --background-secundary:#035ac5;
-  --color-primary: #4D3EFC;
-  --color-segundary: #363636;
-  /*STYLE COLORS DARK*/
-  --backgraund-primary-dark: #1F1717;
-  --color-black:#1C1C1C;
-  --bacgrkound-green:	#26ff00;
-  --color-primary-dark: #F0F8FF;
-  --color-segundary-dark: #8C83ED;
-
+  --color-primary: #f0f0f0;
+  --color-segundary: #2f69d4;
+  --color-tertiary: #252525e1;
+  --color-Quaternary: #f6e203;
   /*FONTS TEXT*/
   --font-default: "Roboto", sans-serif;
 

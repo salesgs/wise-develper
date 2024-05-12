@@ -19,12 +19,12 @@
   box-shadow: 0 2px 4px rgba(77, 77, 77, 0.58);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  background-color: var(--backgraund-primary);
+  background-color: var(--color-primary);
 }
 
 .option:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(245, 245, 245, 0.747);
+  box-shadow: 0 5px 10px rgba(4, 134, 255, 0.747);
 }
 
 .coxinha {
@@ -53,7 +53,7 @@
 
 .informations {
   margin-left: 10px;
-  color: var(--color-segundary);
+  color: var(--color-tertiary);
   font-family: var(--font-default);
 }
 
@@ -64,7 +64,7 @@
 }
 
 .sum h1 {
-  color: var(--color-segundary);
+  color: var(--color-tertiary);
   font-weight: 600;
   font-family: "Roboto", sans-serif;
 
@@ -112,10 +112,10 @@
   text-decoration: none;
   font-family: var(--font-default);
   font-size: 40px;
-  color: var(--color-black);
+  color: var(--color-tertiary);
   font-weight: 800;
   text-transform: uppercase;
-  background-color: var(--backgraund-primary);
+  background-color: var(--color-primary);
   transition: 1s;
   box-shadow: 6px 6px 0 var(--color-segundary);
   transform: skewX(-15deg);
@@ -127,7 +127,7 @@
 
 .cta:hover {
   transition: 0.5s;
-  box-shadow: 10px 10px 0 var(--bacgrkound-green);
+  box-shadow: 10px 10px 0 var(--color-Quaternary);
 }
 
 .cta span:nth-child(2) {
@@ -181,15 +181,15 @@ path.two {
 
 @keyframes color_anim {
   0% {
-    fill: var(--color-primary);
+    fill: var(--color-Quaternary);
   }
 
   50% {
-    fill: var(--bacgrkound-green);
+    fill: var(--color-segundary);
   }
 
   100% {
-    fill: var(--color-primary);
+    fill: var(--color-Quaternary);
   }
 }
 

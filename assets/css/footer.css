@@ -3,8 +3,6 @@
   flex-direction: row-reverse;   
   padding-top: 50px;
   justify-content: space-between;
- 
-  background-color: var(--color-primary);
   height: 18vh;
   width: 100%;
 
@@ -20,8 +18,8 @@
   font-weight: 800;
   text-transform: uppercase;
   font-family: var(--font-default);
-  color: var(--color-black);
-  background-color: var(--backgraund-primary);
+  color: var(--color-tertiary);
+  background-color: var(--color-primary);
   box-shadow: 6px 6px 0 var(--color-segundary);
 }
 #valor-total{

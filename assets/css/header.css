@@ -2,11 +2,14 @@
 
 header{
    margin: 20px;
+   display: flex;
+   justify-content: center;
 }
 
 .logo_menu {
-    background-color: var(--color-primary);
-    width: 100%;
+    background-color: var(--color-segundary);
+    width: 50%;
+    border-radius: 20px;
     height: 150px;
     display: flex;
     justify-content: center;
