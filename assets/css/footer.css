@@ -5,10 +5,8 @@
   justify-content: space-between;
   height: 18vh;
   width: 100%;
-
-}
-.wrapper a{
-  margin-right: 2.5rem;
+  border: solid red 2px;
+  height: 66px;
 }
 
 .total{
@@ -25,4 +23,41 @@
 #valor-total{
  margin-left: 10px;
 
+}
+
+.wrapper {
+  margin-right: 2rem;
+  
+}
+@media (max-width:780px){
+  .footer{
+     border: solid black 1px;
+  }
+  .footer .cta{
+    width: 50%;
+    height: 50px;
+  }
+  .footer .cta span{
+    font-size:1.5rem ;
+  }
+  .total{
+    width: 40%;
+    font-size: 0.80rem;    
+  } 
+}
+@media (max-width:510px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    height:  30vh;
+  }
+  .wrapper {
+    width: 45%;
+  }
+  .footer .total {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
 }
