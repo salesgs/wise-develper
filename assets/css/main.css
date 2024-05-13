@@ -20,11 +20,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: var(--color-primary);
+  box-shadow: 6px 6px 0 var(--color-segundary);
 }
 
 .option:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(4, 134, 255, 0.747);
 }
 
 .coxinha {
@@ -238,7 +238,7 @@ path.two {
 .loading div {
   width: 20px;
   height: 20px;
-  background-color: var(--color-primary); 
+  background-color: var(--color-segundary); 
   border-radius: 50%;
   margin: 0 5px;
   animation: bounce 1.5s infinite ease-in-out alternate;
@@ -271,7 +271,7 @@ path.two {
 }
 
 .mensagem_loading {
-  color: var(--color-primary); 
+  color: var(--color-segundary); 
   font-family:var(--font-default);
   margin-bottom: 10px; 
 }

@@ -1,18 +1,17 @@
 .footer{
   display: flex;
   flex-direction: row-reverse;   
-  padding-top: 50px;
   justify-content: space-between;
-  height: 18vh;
+  align-items: center;
+  height: 20vh;
   width: 100%;
-  border: solid red 2px;
-  height: 66px;
 }
 
 .total{
   width: 300px;
   height: 4.5rem;
   margin-left: 2.5rem;
+  margin-right: 2.5rem ;
   font-weight: 800;
   text-transform: uppercase;
   font-family: var(--font-default);
@@ -25,10 +24,40 @@
 
 }
 
-.wrapper {
-  margin-right: 2rem;
-  
+.btn{
+  display: inline-block;
+  height: 50px;
+  width: 150px; 
+  padding: 1rem 2rem; 
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: var(--font-default);
+  background-color:var(--color-primary); 
+  box-shadow: 6px 6px 0 var(--color-segundary);
+  color: var(--color-tertiary);
+  border: none; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  text-align: center; 
+  line-height: 50px; 
+  margin-right: 2.5rem ;
+  font-size: 1.5rem;
 }
+
+
+.btn:hover {
+  background-color: var(--color-segundary); /* Cor de fundo mais escura ao passar o mouse */
+  box-shadow: 6px 6px 0 var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn:active {
+  background-color: #b3b3b3; /* Cor de fundo ainda mais escura ao clicar */
+}
+
 @media (max-width:780px){
   .footer{
      border: solid black 1px;
