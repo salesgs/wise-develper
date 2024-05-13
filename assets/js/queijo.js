@@ -1,16 +1,6 @@
-import { arrayPriceQueijo } from "./statusPedido.js";
 import { sumValues } from "./sumTotal.js";
-// import { subractionValues } from "./sumTotal.js";
-
-class Queijo{
-  price;
-
-  setPriceQueijo(price){
-    this.price = price;
-    arrayPriceQueijo.push(this.price);
-  }
-}
-
+import { validNextButton } from "./valid.js";
+import { validNextButtonDecrement } from "./valid.js";
 
 export default function incrmentQueijo() {
   const h1 = document.getElementById("number-queijo");
@@ -27,18 +17,11 @@ export default function incrmentQueijo() {
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   
   sumValues();
-  let queijoPrice = new Queijo();
-  queijoPrice.setPriceQueijo(formattedTotalValue);
-  //VALIDAÇÃO PARA LIBERAR O BOTÃO 
-  // Validação para liberar o botão
-  let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
-  let numberCoxinha = new Number(numberStringCoxinha);
-  let numberStringKib  = document.getElementById("number-kib").innerText;
-  let numberKib = new Number(numberStringKib);
-
-  if(numberKib>0 || numberCoxinha > 0|| numberQueijo > 0){
-   let button = document.getElementById("buttonNext");
-   button.style.display="block";
+  
+  const valid = validNextButton();
+  if(valid){
+    let button = document.getElementById("buttonNext");
+    button.style.display="block"; 
   }
 }
 
@@ -56,25 +39,11 @@ export function decrementQueijo() {
   let formattedTotalValue = number == -1 ? totalValulenot : (unitValue * number).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
-  // subractionValues();
-  // VALIDAÇÃO BOTÃO 
-  sumValues();
-
-let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
-let numberCoxinha = new Number(numberStringCoxinha);
-
-let numberStringQueijo = document.getElementById("number-queijo").innerText;
-let numberQueijo  = new Number(numberStringQueijo);
-
-  let numberStringKib  = document.getElementById("number-kib").innerText;
-  let numberKib = new Number(numberStringKib);
   
-
-if((numberKib==0 && numberCoxinha == 0 ) && ( numberQueijo == 0)){
- let button = document.getElementById("buttonNext");
- button.style.display="none";
-}
-
-
-}
-
+  sumValues();
+  const valid = validNextButtonDecrement();
+  if(valid == false){
+    let button = document.getElementById("buttonNext");
+    button.style.display="none";
+ }
+} 

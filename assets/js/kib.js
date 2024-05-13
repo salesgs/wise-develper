@@ -1,13 +1,6 @@
-import { arrayPriceKib } from "./statusPedido.js";
 import {sumValues} from "./sumTotal.js";
-// import { subractionValues } from "./sumTotal.js";
-class Kib{
-    priceKib;
-    setPriceKib(price){
-        this.setPriceKib = price;
-        arrayPriceKib.push(this.setPriceKib);
-    }
-}
+import { validNextButton } from "./valid.js";
+import { validNextButtonDecrement } from "./valid.js";
 
 
 export default function incrementKib() {
@@ -30,25 +23,14 @@ export default function incrementKib() {
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
     sumValues();
-        //===============================
-   
- let kibPrice = new Kib();
- kibPrice.setPriceKib(formattedTotalValue);
-    //VALIDAÇÃO PARA LIBERAR O BOTÃO 
-  // Validação para liberar o botão
-  let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
-  let numberCoxihna = new Number(numberStringCoxinha);
-  
-  let numberStringQueijo = document.getElementById("number-queijo").innerText;
-  let numberQueijo  = new Number(numberStringQueijo);
-  if(numberKib>0 || numberCoxihna >0 || numberQueijo > 0){
-   let button = document.getElementById("buttonNext");
-   button.style.display="block";
-  }
-
- 
+    
+    let valid = validNextButton();
+    console.log(valid);
+    if(valid){
+     let button = document.getElementById("buttonNext");
+     button.style.display="block";
+    }
 }
-
 export function decrementKib() {
     const h1 = document.getElementById("number-kib");
     const h2 = document.getElementById("valor-kib");
@@ -63,20 +45,10 @@ export function decrementKib() {
     let formattedTotalValue = numberKib == -1 ? totalValulenot : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
-//   subractionValues();
-   sumValues();
-// VALIDAÇÃO BOTÃO 
-
-let numberStringCoxinha= document.getElementById("number-coxinha").innerText;
-let numberCoxihna = new Number(numberStringCoxinha);
-
-let numberStringQueijo = document.getElementById("number-queijo").innerText;
-let numberQueijo  = new Number(numberStringQueijo);
-
-if((numberKib==0 && numberCoxihna == 0 ) && ( numberQueijo == 0)){
- let button = document.getElementById("buttonNext");
- button.style.display="none";
+    sumValues();
+  const valid = validNextButtonDecrement();
+  if(valid==false){
+    let button = document.getElementById("buttonNext");
+    button.style.display="none";
+  }   
 }
-
-}
-

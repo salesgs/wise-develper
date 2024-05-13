@@ -1,16 +1,6 @@
-import { arrayPriceCoxinha } from "./statusPedido.js";
 import {sumValues}from "./sumTotal.js";
-// import { subractionValues } from "./sumTotal.js";
-//ORIENTAÇÃO OBJETO
-class Coxinha {
-  priceCoxinha;
-  setPriceCoxinha(price){
-   this.priceCoxinha = price;
-   arrayPriceCoxinha.push(this.priceCoxinha);
-   
-  }
-
-}
+import { validNextButton } from "./valid.js";
+import { validNextButtonDecrement } from "./valid.js";
 
 export function incrementCoxinha() {
   const h1 = document.getElementById("number-coxinha");
@@ -27,18 +17,12 @@ export function incrementCoxinha() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   sumValues();
-  let coxinhaPrice = new Coxinha();
-  coxinhaPrice.setPriceCoxinha(formattedTotalValue);
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
-    
-  let numberStringQueijo = document.getElementById("number-queijo").innerText;
-  let numberStringKib  = document.getElementById("number-kib").innerText;
-    
-  let numberQueijo  = new Number(numberStringQueijo);
-  let numberKib = new Number(numberStringKib);
-  if(numberKib>0 || numberCoxinha>0 || numberQueijo>0){
-   let button = document.getElementById("buttonNext");
-   button.style.display="block";
+  
+  let valid = validNextButton();
+  if(valid){
+    let button = document.getElementById("buttonNext");
+    button.style.display="block";
   }
 
 }
@@ -58,17 +42,12 @@ export function decrementCoxinha() {
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
   h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
 
-  // subractionValues();
   sumValues();
-  let numberStringQueijo = document.getElementById("number-queijo").innerText;
-  
-  let numberQueijo  = new Number(numberStringQueijo);
-  let numberStringKib  = document.getElementById("number-kib").innerText;
-  let numberKib = new Number(numberStringKib);
-  
-  if((numberKib == 0 && numberCoxinha == 0 ) && ( numberQueijo == 0)){
-   let button = document.getElementById("buttonNext");
-   button.style.display="none";
+    
+  const valid = validNextButtonDecrement();
+  if(valid==false){
+      let button = document.getElementById("buttonNext");
+      button.style.display="none";
   }
-}
-
+  
+  }

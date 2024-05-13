@@ -29,7 +29,6 @@ const decrementQueijoImg = document.getElementById("decrementQueijoImg");
 incrementQueijoImg.addEventListener("click",incrmentQueijo);
 decrementQueijoImg.addEventListener("click",decrementQueijo);
 //----------------------------------------------------------
-
 //Modal btn Proximo
 const modalLodding = document.getElementById("buttonNext");
 
