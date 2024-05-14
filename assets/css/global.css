@@ -3,12 +3,13 @@
 :root {
 
   /*STYLE COLORS*/
-  --color-primary: #f0f0f0;
-  --color-segundary: #2f69d4;
-  --color-tertiary: #252525e1;
-  --color-Quaternary: #f6e203;
+  --color-primary:#f0ffff;
+  --color-segundary: #0047c9;
+  --color-tertiary: #030303e1;
+  --color-Quaternary:#f0f8ff;
   /*FONTS TEXT*/
   --font-default: "Roboto", sans-serif;
+  --border-default: 1.5px solid var(--color-tertiary);
 
 }
 
@@ -26,7 +27,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/assets/img/interior-do-restaurante.jpg);
+  background-color: var(--color-primary);
   background-size: cover;
   background-position: center;
   filter: blur(5px); /* Aplica o efeito de desfoque apenas na imagem de fundo */
