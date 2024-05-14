@@ -191,7 +191,7 @@
  
   @media screen and (max-width: 500px) {
     .option {
-      flex-basis: 200px; /* Reduz a largura dos cards */
+      flex-basis: 230px; /* Reduz a largura dos cards */
       height: 350px; /* Mantém a altura automática para preservar a proporção */
     }
   }  
@@ -199,7 +199,7 @@
   .kib,
   .coxinha,
   .bolinho-queijo {
-    width: 200px; /* Reduz a largura das imagens */
+    width: 230px; /* Reduz a largura das imagens */
     height: 200px; /* Reduz a altura das imagens */
   }
 
@@ -208,7 +208,7 @@
     font-size: 0.80rem;
   }
   .mensagem_loading{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
 }
