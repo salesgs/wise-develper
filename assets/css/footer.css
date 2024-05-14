@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   height: 30vh;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .total{
@@ -68,8 +68,9 @@
     font-size: 0.80rem;
   }
 }
-@media (max-width:510px){
+@media (max-width:580px){
   .footer{
+    border: solid blue 1px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -88,3 +89,9 @@
     font-size: 0.80rem;
   }
 }
+
+/* @media (max-width:510px){
+  .footer span{
+    font-size: 22px;
+  }
+} */

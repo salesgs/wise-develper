@@ -29,6 +29,7 @@ export default function incrementKib() {
     if(valid){
      let button = document.getElementById("buttonNext");
      button.style.display="block";
+     button.style.backgroundColor="#32CD32";
     }
 }
 export function decrementKib() {
@@ -50,5 +51,6 @@ export function decrementKib() {
   if(valid==false){
     let button = document.getElementById("buttonNext");
     button.style.display="none";
+ 
   }   
 }

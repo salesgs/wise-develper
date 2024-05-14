@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
 
 :root {
 
@@ -10,21 +14,23 @@
   /*FONTS TEXT*/
   --font-default: "Roboto", sans-serif;
   --border-default: 1.5px solid var(--color-tertiary);
-
+  --background-lime-green:#32CD32;
 }
 
 .container {
-  position: relative; /* Adiciona posicionamento relativo para conter o pseudo-elemento */
+   position: relative;  
+   /* Adiciona posicionamento relativo para conter o pseudo-elemento   */
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .container::before {
-  content: ""; /* Adiciona um conteúdo vazio ao pseudo-elemento */
-  position: absolute; /* Posiciona o pseudo-elemento sobre a área do .container */
-  top: 0;
-  left: 0;
+  content: "";   /*Adiciona um conteúdo vazio ao pseudo-elemento */
+  position: absolute; /* Posiciona o pseudo-elemento sobre a área do .container*/ 
+   top: 0;
+  left: 0; 
   width: 100%;
   height: 100%;
   background-color: var(--color-primary);

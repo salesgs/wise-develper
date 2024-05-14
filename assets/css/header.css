@@ -5,7 +5,12 @@ header{
    justify-content: center;
    margin-bottom: 10px;
 }
-
+.logo{
+     width: 500px;  
+     height: auto;
+   
+ 
+}
 .logo_menu {
     background-color: var(--color-segundary);
     width: 100%;
@@ -16,14 +21,17 @@ header{
 }
 
 .logo {
-    width: 500px;
+    /* width: 500px; */
     height: auto;
+    /* width: 100%; */
 }
 
-@media (max-width:905px){
+@media screen and (max-width:500px){
+ 
+ 
     .logo {
         width:100%;
-        height: auto;
-    }
+         height: auto; 
+    }  
  }
  
