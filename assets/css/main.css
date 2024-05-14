@@ -20,7 +20,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: var(--color-Quaternary);
-  border:var(--border-default);
+  border: var(--border-default);
 }
 
 .option:hover {
@@ -66,8 +66,6 @@
 .sum h1 {
   color: var(--color-tertiary);
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
-
 }
 
 .informations h2 {
@@ -84,7 +82,7 @@
 .increment,
 .decrement {
   border-radius: 20px;
-  height: 50px;
+  height: 50%;
 }
 
 /* Adicionando efeito de clique */
@@ -127,7 +125,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fffffff9; 
+  background-color: #fffffff9;
   border-radius: 20px;
   box-shadow: 0px 2px 10px #00000098;
   padding: 20px;
@@ -145,13 +143,13 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .loading div {
   width: 20px;
   height: 20px;
-  background-color: var(--color-segundary); 
+  background-color: var(--color-segundary);
   border-radius: 50%;
   margin: 0 5px;
   animation: bounce 1.5s infinite ease-in-out alternate;
@@ -184,7 +182,33 @@
 }
 
 .mensagem_loading {
-  color: var(--color-segundary); 
-  font-family:var(--font-default);
-  margin-bottom: 10px; 
+  color: var(--color-segundary);
+  font-family: var(--font-default);
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width:500px) {
+ 
+  @media screen and (max-width: 500px) {
+    .option {
+      flex-basis: 200px; /* Reduz a largura dos cards */
+      height: 350px; /* Mantém a altura automática para preservar a proporção */
+    }
+  }  
+
+  .kib,
+  .coxinha,
+  .bolinho-queijo {
+    width: 200px; /* Reduz a largura das imagens */
+    height: 200px; /* Reduz a altura das imagens */
+  }
+
+  .informations,
+  .sum{
+    font-size: 0.80rem;
+  }
+  .mensagem_loading{
+    font-size: 0.90rem;
+  }
+
 }
