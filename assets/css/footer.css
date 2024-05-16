@@ -72,22 +72,24 @@
   .footer {
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     gap: 30px;
     height: 20vh;
-    padding: 46px;
-    padding-left: 30px;
+    padding:0;
   }
+
   .total {
     height: 50px;
-    width: 220px;
+    width: 230px;
     font-size: 0.80rem;
+    
   }
 
   .btn {
-    width: 70%;
+    width:100%;
+    padding: 1px;
   }
 }
+
 
 /* @media (max-width:510px){
   .footer span{
