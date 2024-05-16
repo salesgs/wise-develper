@@ -73,15 +73,15 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    height: 20vh;
+    height: 22vh;
     padding:0;
+    padding-bottom: 20px;
   }
 
   .total {
     height: 50px;
     width: 230px;
-    font-size: 0.80rem;
-    
+    font-size: 0.80rem; 
   }
 
   .btn {
@@ -89,7 +89,6 @@
     padding: 1px;
   }
 }
-
 
 /* @media (max-width:510px){
   .footer span{
