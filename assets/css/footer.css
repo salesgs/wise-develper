@@ -3,7 +3,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  height: 30vh;
+  height: 22vh;
   /* width: 100%; */
 }
 
@@ -74,9 +74,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    height: 50vh;
-    margin: 0;
-    padding: 44px;
+    height: 20vh;
+    padding: 46px;
     padding-left: 30px;
   }
   .total {
