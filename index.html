@@ -91,7 +91,6 @@
       <div class="item footer">
         <!-- designed button -->
         <div class="footer__button">
-
           <a href="#" class="btn" id="buttonNext" style="display: none;"><span>Próximo</span></a>
         </div>
         <div class="total">
@@ -100,9 +99,9 @@
       </div>
     </div>
   </div>
-  <!-- JANELA MODAL DO   PROXIMO -->
-  <div class="janela_modal" id="janela_modal">
-    <div class="modal">
+  <!-- JANELA MODAL DO PROXIMO -->
+  <div class="janela_modal_gerador" id="janela_modal">
+    <div class="modal_gerador">
       <div class="loading">
         <div></div>
         <div></div>
@@ -112,6 +111,54 @@
       </div>
       <h1 class="mensagem_loading">Gerando Pedido Aguarde...</h1>
 
+    </div>
+  </div>
+  <!-- JANELA MODAL DO CHECKOUT -->
+  <div class="janela_modal_checkout">
+    <div class="modal_checkout">
+      <div class=" ticket">
+        <h1>Ticket:01</h1>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Item 1</td>
+            <td>2</td>
+            <td>R$ 10,00</td>
+          </tr>
+          <tr>
+            <td>Item 2</td>
+            <td>1</td>
+            <td>R$ 15,00</td>
+          </tr>
+          <tr>
+            <td>Item 3</td>
+            <td>1</td>
+            <td>R$ 5,00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">
+              <h2>Total</h2>
+              <h1>R$ 30,00</h1>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="container_button">
+        <div class="button_exit">
+        </div>
+        <div class="button_finish">
+        </div>
+      </div>
     </div>
   </div>
   <script src="./assets/js/eventsMain.js" type="module"></script>
