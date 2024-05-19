@@ -134,7 +134,8 @@
 
 
 /* Adicionando uma animação quando a modal é exibida */
-.modal.show {
+.janela_modal_gerador.show {
+  display: flex;
   opacity: 1;
 }
 
@@ -186,6 +187,7 @@
   font-family: var(--font-default);
   margin-bottom: 10px;
 }
+
 .janela_modal_checkout{
   width: 100%;
   height: 100%;
@@ -193,11 +195,14 @@
   top: 0;
   left: 0;
   background-color: #00000083;
-  display: flex;
-  
+  display: none;
   justify-content: right;
   z-index: 999;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); 
+  transition: opacity 0.3s ease;
 }
+
 .modal_checkout{
   width: 85%;
   max-width: 530px;
@@ -268,6 +273,78 @@ tfoot td:nth-child(1) h1 {
   display: inline-block;
   vertical-align: middle;
 }
+
+.ticket{
+  background-color: var(--color-segundary);
+  margin-bottom: 10px;
+  width: 100%;
+  color: var(--color-primary);
+  font-family: var(--font-default);
+  box-shadow: 2px 4px 3px #00000083;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.ticket h1{
+  margin-left: 10px;
+}
+
+.container_button{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button_exit {
+  height: 50px; /* Definindo altura */
+  width: 50px; /* Definindo largura */
+  font-weight: 600;
+  font-family: var(--font-default);
+  border: var(--border-default);
+  background-color: #ff0000;
+  color: var(--color-primary);
+  border-radius: 50%; 
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.1s;
+  text-align: center;
+  line-height: 50px; 
+  margin-right: 10px;
+  font-size: 1.5rem;
+  padding: 0; 
+}
+
+.button_exit:active {
+  background-color: #cc0000; 
+  transform: scale(0.95); 
+}
+
+.button_finish {
+  height: 40px;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-family: var(--font-default);
+  background-color: var(--color-segundary);
+  border: var(--border-default);
+  color: var(--color-primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.1s; /* Transição combinada */
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+
+.button_finish:active {
+  background-color: var(--color-segundary);
+  transform: scale(0.95); /* Efeito de pressionado */
+}
+
+
 
 @media screen and (max-width:500px) {
  
