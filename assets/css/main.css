@@ -369,5 +369,18 @@ tfoot td:nth-child(1) h1 {
   .mensagem_loading{
     font-size: 1.3rem;
   }
-
+}
+tr th{
+  color: var( --color-tertiary);   
+  font-size: 18px;
+}
+tr td{
+  color: var( --color-tertiary);   
+  font-size: 18px;
+}
+.trRow{
+  color: var( --color-tertiary);
+  font-size: 22px;
+  color: var( --color-tertiary);
+ 
 }

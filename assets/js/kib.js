@@ -25,8 +25,7 @@ export default function incrementKib() {
     sumValues();
     
     let valid = validNextButton();
-    console.log(valid);
-    if(valid){
+     if(valid){
      let button = document.getElementById("buttonNext");
      button.style.display="block";
      button.style.backgroundColor="#32CD32";
