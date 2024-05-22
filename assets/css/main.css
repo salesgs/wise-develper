@@ -387,7 +387,7 @@ tfoot td:nth-child(1) h1 {
   @media screen and (max-width: 500px) {
     .option {
       flex-basis: 225px; /* Reduz a largura dos cards */
-      height: 350px; /* Mantém a altura automática para preservar a proporção */
+      height: 380px; /* Mantém a altura automática para preservar a proporção */
     }
 
   .kib,
@@ -428,17 +428,56 @@ tr td{
   font-family: var(--font-calculate);
 
 }
-@media screen and (max-width:600px) {
-  .modal_checkout{
+/* Media Query para telas com largura máxima de 600px */
+@media screen and (max-width: 600px) {
+  .janela_modal_checkout {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal_checkout {
     width: 100%;
   }
-  thead{
+
+  table {
     width: 100%;
+    table-layout: auto; /* Permite que as colunas redimensionem conforme necessário */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    display: block; /* Necessário para que a rolagem funcione corretamente */
   }
-  tbody{
-    width: 100%; 
+
+  thead,
+  tbody,
+  tfoot {
+    width: 100%;
+    display: table; /* Mantém a estrutura de tabela */
   }
-  tfoot{
-   width: 100%;
+
+  /* Ajustes nas colunas para evitar quebra de layout */
+  thead th,
+  tbody td,
+  tfoot td {
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: normal; /* Permite a quebra de linha */
+  }
+
+  /* Ajustes específicos para colunas dentro da media query */
+  thead th:nth-child(1),
+  tbody td:nth-child(1),
+  tfoot td:nth-child(1) {
+    width: 60%;
+  }
+
+  thead th:nth-child(2),
+  tbody td:nth-child(2),
+  tfoot td:nth-child(2) {
+    width: 20%;
+  }
+
+  thead th:nth-child(3),
+  tbody td:nth-child(3),
+  tfoot td:nth-child(3) {
+    width: 20%;
   }
 }
