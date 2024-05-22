@@ -422,15 +422,15 @@ tr td{
 }
 @media screen and (max-width:600px) {
   .modal_checkout{
-    width: 100%;
+    width: 70%;
   }
   thead{
-    width: 100%;
+    width: 70%;
   }
   tbody{
-    width: 100%; 
+    width:70%; 
   }
   tfoot{
-   width: 100%;
+   width: 70%;
   }
 }
