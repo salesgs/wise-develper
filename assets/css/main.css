@@ -372,13 +372,12 @@ tfoot td:nth-child(1) h1 {
   transform: scale(0.95); /* Efeito de pressionado */
 }
 
-@media screen and (max-width:500px) {
   @media screen and (max-width: 500px) {
     .option {
       flex-basis: 225px; /* Reduz a largura dos cards */
       height: 350px; /* Mantém a altura automática para preservar a proporção */
     }
-  }  
+  
 
   .kib,
   .coxinha,
@@ -401,9 +400,7 @@ tr th{
 }
 tr td{
   color: var( --color-tertiary);   
-  
   font-size: 18px;
-
 }
 .trRow{
   font-size: 22px;
