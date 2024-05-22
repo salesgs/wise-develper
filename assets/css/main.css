@@ -136,6 +136,9 @@
   z-index: 1000;
 }
 
+.ticket h1{
+ font-family: var(--font-default);  
+}
 
 /* Adicionando uma animação quando a modal é exibida */
 .janela_modal_gerador.show {
