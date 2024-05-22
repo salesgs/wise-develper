@@ -451,7 +451,6 @@ tr td{
   tbody,
   tfoot {
     width: 100%;
-    display: table; /* Mantém a estrutura de tabela */
   }
 
   /* Ajustes nas colunas para evitar quebra de layout */
