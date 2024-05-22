@@ -432,7 +432,6 @@ tr td{
 @media screen and (max-width: 600px) {
   .janela_modal_checkout {
     justify-content: center;
-    display: flex;
     flex-direction: column;
   }
 
@@ -444,7 +443,6 @@ tr td{
     width: 100%;
     table-layout: auto; /* Permite que as colunas redimensionem conforme necessário */
     overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    display: block; /* Necessário para que a rolagem funcione corretamente */
   }
 
   thead,
