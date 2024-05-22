@@ -225,9 +225,10 @@
 
 table {
   width: 100%;
-  height: 600px;
+  height: auto; /* Remove altura fixa para permitir redimensionamento */
   font-family: var(--font-default);
- 
+  flex: 1 1 auto; /* Permite que a tabela cresça dentro do container flex */
+  overflow: auto; /* Adiciona rolagem se necessário */
 }
 thead{
   height: 80px;
@@ -418,4 +419,18 @@ tr td{
   color: var(--color-tertiary);
   font-family: var(--font-calculate);
 
+}
+@media screen and (max-width:600px) {
+  .modal_checkout{
+    width: 100%;
+  }
+  thead{
+    width: 100%;
+  }
+  tbody{
+    width: 100%; 
+  }
+  tfoot{
+   width: 100%;
+  }
 }
