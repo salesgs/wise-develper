@@ -298,7 +298,7 @@ tfoot td:nth-child(1) h2 {
 }
 
 tfoot td:nth-child(1) h1 {
-  display: inline-block;
+  display: inline-block; 
   vertical-align: middle;
 }
 
@@ -377,7 +377,6 @@ tfoot td:nth-child(1) h1 {
       flex-basis: 225px; /* Reduz a largura dos cards */
       height: 350px; /* Mantém a altura automática para preservar a proporção */
     }
-  
 
   .kib,
   .coxinha,
@@ -419,15 +418,23 @@ tr td{
 }
 @media screen and (max-width:600px) {
   .modal_checkout{
-    width: 70%;
+    width: 100%;
   }
   thead{
-    width: 70%;
+    width: 100%;
   }
   tbody{
-    width:70%; 
+    width: 100%; 
   }
   tfoot{
-   width: 70%;
+   width: 100%;
+  }
+}
+@media screen and (max-width:495px) {
+  tfoot td{
+   text-align: center;
+  }
+  tfoot td h2{
+    text-align: center;
   }
 }
