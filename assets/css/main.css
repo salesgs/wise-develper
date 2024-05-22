@@ -74,14 +74,26 @@
   padding: 1rem;
 }
 
-.informations h3 {
+.nome-item{
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family:var(--font-default);
   text-transform: uppercase;
   padding: 1rem;
 }
-.h3TotalValues {
+.total{
+  display: flex;
+  border: solid 1px red;
+}
+.total-values{
   padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-family: var(--font-calculate);
+  width: 40%;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 3px double black;
+  background-color: #CCE7E8;
 }
 .increment,
 .decrement {
@@ -290,7 +302,7 @@ tfoot tr td{
   border: solid 1px;
 }
 
-tfoot td:nth-child(1) h2 {
+tfoot td:nth-child(1) h1{
   display: inline-block;
   margin-right: 300px; 
   vertical-align: middle;
@@ -428,13 +440,5 @@ tr td{
   }
   tfoot{
    width: 100%;
-  }
-}
-@media screen and (max-width:495px) {
-  tfoot td{
-   text-align: center;
-  }
-  tfoot td h2{
-    text-align: center;
   }
 }

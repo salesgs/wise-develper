@@ -15,7 +15,7 @@ export function incrementCoxinha() {
   h1.innerText = `${numberCoxinha}`;//SOMA A CADA CLICK
   let formattedTotalValue = numberCoxinha === 1 ? unitValue.toFixed(2) : (unitValue * numberCoxinha).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
-  h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
+  h3.innerText = "R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
   sumValues();
   //VALIDAÇÃO PARA LIBERAR O BOTÃO 
   
@@ -41,7 +41,7 @@ export function decrementCoxinha() {
   numberCoxinha--; //INCREMENTNADO O VALOR DE NUMBER
   let formattedTotalValue = numberCoxinha == -1 ? totalValulenot : (unitValue * numberCoxinha).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
   h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
-  h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
+  h3.innerText = "R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
 
   sumValues();
     

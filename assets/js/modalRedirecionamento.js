@@ -1,7 +1,7 @@
 export function activeLoadingModal() {
   const modalAtive = document.getElementById("janela_modal");//PEGANDO O MODAL
   const modalCheckout = document.getElementById("janela_modal_checkout")
-  const time = 1000;// TIME DO LOADING
+  const time = 3000;// TIME DO LOADING
   modalAtive.style.display = "flex"; //ATIVANDO MODAL USANDO DISPLAY
   // FUNÇÃO DO REDIRECIONAMENTO DE MODAL
   function finishLoading() {
@@ -17,7 +17,7 @@ export function activeLoadingModal() {
 function valueTotalItems(){
   const h1  = document.getElementById("valor-total");
   const h1TotalModal = document.getElementById("valueTotal");
-  h1TotalModal.innerText = h1.innerText.slice(6); 
+  h1TotalModal.innerText ='R$: ' + h1.innerText.slice(3); 
   
   /** VALORES DE KIB   */
   const h1NumberKib = document.getElementById("number-kib");
@@ -26,7 +26,7 @@ function valueTotalItems(){
   const totalKib = document.getElementById("total-valor-kib");
   const priceKib = document.getElementById("priceKib");
   
-  priceKib.innerText = totalKib.innerText.slice(6);
+  priceKib.innerText ='R$: ' + totalKib.innerText.slice(3);
   /*============================================== */
   /** VALORES DE COXINHA   */
   const h1NumberCoxinha = document.getElementById("number-coxinha");
@@ -34,7 +34,7 @@ function valueTotalItems(){
   trQuantityCoxinha.innerText = h1NumberCoxinha.innerText;
   const totalCoxinha = document.getElementById("total-valor-coxinha");
   const priceCoxinha = document.getElementById("priceCoxinha");
-  priceCoxinha.innerText = totalCoxinha.innerText.slice(6);
+  priceCoxinha.innerText ='R$: ' + totalCoxinha.innerText.slice(3);
  /*==============================================*/
   /** VALORES DE QUEIJO   */
   const h1NumberQueijo = document.getElementById("number-queijo");
@@ -42,5 +42,5 @@ function valueTotalItems(){
   trQuantityBolinho.innerText = h1NumberQueijo.innerText;
   const totalQueijo = document.getElementById("total-valor-queijo");
   const priceQuejo = document.getElementById("priceQueijo");
-  priceQuejo.innerText = totalQueijo.innerText.slice(6);  
+  priceQuejo.innerText ='R$: ' + totalQueijo.innerText.slice(3);  
 }

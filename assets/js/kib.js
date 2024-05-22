@@ -21,7 +21,7 @@ export default function incrementKib() {
     h1.innerText = `${numberKib}`;//SOMA A CADA CLICK
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
     let formattedTotalValue = numberKib === 1 ? unitValue.toFixed(2) : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
-    h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
+    h3.innerText = "R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
     sumValues();
     
     let valid = validNextButton();
@@ -44,7 +44,7 @@ export function decrementKib() {
     numberKib--; //INCREMENTNADO O VALOR DE NUMBER
     let formattedTotalValue = numberKib == -1 ? totalValulenot : (unitValue * numberKib).toFixed(2);//VALIDAÇÃO ACORAGEM NO ZERO E DECREMENT DO VALOR TOTAL
     h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
-    h3.innerText = "TOTAL R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
+    h3.innerText = "R$:" + formattedTotalValue;//ATRIBUINDO O VALOR TOTAL NO HTML
     sumValues();
   const valid = validNextButtonDecrement();
   if(valid==false){

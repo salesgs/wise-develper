@@ -66,15 +66,13 @@
   margin-top: 6px;
 }
 .total h1{
-   font-family: var(--font-calculate);
-  color: #000000; /* Números pretos */
-  font-family: 'Seven Segment', sans-serif; /* Fonte segmentada para simular dígitos de LCD */
-    font-size: 2em; /* Tamanho da fonte ajustável conforme necessidade */
-    /* padding: 10px; */
-   /* Borda preta para dar um efeito de display */
-    /* width: max-content; */
-    display: inline-block;
-    text-align: center;
+  font-family: var(--font-calculate);
+  color: #000000; 
+  font-family: 'Seven Segment', sans-serif; 
+  font-size: 2em;
+  display: flex;
+  justify-content:center;
+  margin-right: 10px;
 }
 
 
