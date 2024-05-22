@@ -22,7 +22,7 @@ export default function incrmentQueijo() {
   if(valid){
     let button = document.getElementById("buttonNext");
     button.style.display="block"; 
-    button.style.backgroundColor="#32CD32";
+    button.style.backgroundColor="#0047c9";
   }
 }
 
