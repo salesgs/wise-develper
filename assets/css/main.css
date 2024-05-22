@@ -478,6 +478,7 @@ tr td{
   tbody td:nth-child(3),
   tfoot td:nth-child(3) {
     width: 20%;
+    font-size: 1rem; 
   }
   #valueTotal{
     font-size: 1rem; 
