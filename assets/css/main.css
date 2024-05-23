@@ -241,7 +241,7 @@
 
 table {
   width: 100%;
-  height: auto;
+  height:auto;
   /* Remove altura fixa para permitir redimensionamento */
   font-family: var(--font-default);
   flex: 1 1 auto;
@@ -509,7 +509,7 @@ tr h2 {
   }
 
   .modal_checkout {
-    width: 90%;
+    width: 93%;
     height: 600px;
   }
 
@@ -542,25 +542,25 @@ tr h2 {
   tbody td:nth-child(1),
   tfoot td:nth-child(1) {
     width: 13%;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   thead th:nth-child(2),
   tbody td:nth-child(2),
   tfoot td:nth-child(2) {
     width: 10%;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   thead th:nth-child(3),
   tbody td:nth-child(3),
   tfoot td:nth-child(3) {
     width: 10%;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   #valueTotal {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .container_button {
@@ -568,18 +568,18 @@ tr h2 {
   }
 
   .button_finish {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .ticket h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .button_exit {
     height: 40px;
     /* Definindo altura */
     width: 40px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 42px;
   }
 
