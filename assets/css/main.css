@@ -80,15 +80,14 @@
   text-transform: uppercase;
   padding: 1rem;
 }
-.total{
-  display: flex;
-}
+
 .total-values{
-  padding: 1rem;
+  padding: 0.7rem;
   margin-bottom: 1rem;
+  font-weight: 800;
   margin-left: 1rem;
   font-family: var(--font-calculate);
-  width: 40%;
+  width: 30%;
   font-size: 1.2rem;
   text-align: center;
   border: 3px double black;
@@ -379,7 +378,7 @@ tfoot td:nth-child(1) h1 {
 }
 
 .button_finish:active {
-  background-color: var(--color-segundary);
+  background-color: #023bc0fa; 
   transform: scale(0.95); /* Efeito de pressionado */
 }
 
