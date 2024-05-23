@@ -19,5 +19,5 @@ function catchNumber(){
  document.getElementById("total-valor-coxinha").innerText="R$:0.00";
  document.getElementById("total-valor-queijo").innerText="R$:0.00";
  document.getElementById("valor-total").innerText="R$:0.00";
-
+ document.getElementById("buttonNext").style.display="none";
 }
