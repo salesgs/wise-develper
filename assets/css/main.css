@@ -20,7 +20,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: var(--color-Quaternary);
-  border: var(--border-default);
+  border: solid 2px var(--color-segundary);
 }
 
 .option:hover {
@@ -73,6 +73,8 @@
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   padding: 1rem;
+  color: var(--color-tertiary);
+  
 }
 
 .nome-item {
@@ -80,6 +82,7 @@
   font-family: var(--font-default);
   text-transform: uppercase;
   padding: 1rem;
+  color: var(--color-tertiary);
 }
 
 .total-values {
@@ -249,8 +252,7 @@ table {
 
 thead {
   height: 80px;
-
-  background-color: #CCE7E8;
+  background-color: var(--color-quinary);
 }
 
 thead th {
@@ -280,7 +282,7 @@ thead th:nth-child(3) {
 
 tbody {
   height: 50px;
-  background-color: #e9e7e7;
+  background-color: var(--color-primary);
   /* border: solid 2px; */
 }
 
@@ -308,7 +310,7 @@ tbody td:nth-child(3) {
 
 tfoot tr td {
   height: 80px;
-  background-color: #CCE7E8;
+  background-color: var(--color-quinary);
   border: solid 1px;
 }
 
