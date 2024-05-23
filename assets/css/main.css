@@ -74,14 +74,14 @@
   padding: 1rem;
 }
 
-.nome-item{
+.nome-item {
   font-weight: 400;
-  font-family:var(--font-default);
+  font-family: var(--font-default);
   text-transform: uppercase;
   padding: 1rem;
 }
 
-.total-values{
+.total-values {
   padding: 0.7rem;
   margin-bottom: 1rem;
   font-weight: 800;
@@ -93,6 +93,7 @@
   border: 3px double black;
   background-color: #CCE7E8;
 }
+
 .increment,
 .decrement {
   border-radius: 20px;
@@ -146,8 +147,8 @@
   z-index: 1000;
 }
 
-.ticket h1{
- font-family: var(--font-default);  
+.ticket h1 {
+  font-family: var(--font-default);
 }
 
 /* Adicionando uma animação quando a modal é exibida */
@@ -205,7 +206,7 @@
   margin-bottom: 10px;
 }
 
-.janela_modal_checkout{
+.janela_modal_checkout {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -216,11 +217,11 @@
   justify-content: right;
   z-index: 999;
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
   transition: opacity 0.3s ease;
 }
 
-.modal_checkout{
+.modal_checkout {
   width: 85%;
   max-width: 530px;
   height: auto;
@@ -235,23 +236,30 @@
 
 table {
   width: 100%;
-  height: auto; /* Remove altura fixa para permitir redimensionamento */
+  height: auto;
+  /* Remove altura fixa para permitir redimensionamento */
   font-family: var(--font-default);
-  flex: 1 1 auto; /* Permite que a tabela cresça dentro do container flex */
-  overflow: auto; /* Adiciona rolagem se necessário */
+  flex: 1 1 auto;
+  /* Permite que a tabela cresça dentro do container flex */
+  overflow: auto;
+  /* Adiciona rolagem se necessário */
 }
-thead{
+
+thead {
   height: 80px;
-  
+
   background-color: #CCE7E8;
 }
-thead th{
+
+thead th {
   border: solid 1px;
 }
-thead  tr th{
+
+thead tr th {
   font-family: var(--font-default);
 }
-tbody tr td{
+
+tbody tr td {
   font-family: var(--font-default);
 
 }
@@ -268,51 +276,53 @@ thead th:nth-child(3) {
   width: 20%;
 }
 
-tbody{
- height: 50px;
- background-color: #e9e7e7;
- /* border: solid 2px; */
+tbody {
+  height: 50px;
+  background-color: #e9e7e7;
+  /* border: solid 2px; */
 }
-tr td{
-  color: var( --color-tertiary);
+
+tr td {
+  color: var(--color-tertiary);
   /* font-family: var(--font-calculate);  */
   font-weight: 600;
   /* border: solid 1px; */
-  
+
 }
-tbody td:nth-child(1){
+
+tbody td:nth-child(1) {
   padding-left: 10px;
 }
 
-tbody td:nth-child(2){
+tbody td:nth-child(2) {
   text-align: right;
   padding-right: 5px;
 }
 
-tbody td:nth-child(3){
+tbody td:nth-child(3) {
   text-align: right;
   padding-right: 5px;
 }
 
-tfoot tr td{
+tfoot tr td {
   height: 80px;
   background-color: #CCE7E8;
   border: solid 1px;
 }
 
-tfoot td:nth-child(1) h1{
+tfoot td:nth-child(1) h1 {
   display: inline-block;
-  margin-right: 300px; 
+  margin-right: 300px;
   vertical-align: middle;
   padding-left: 10px;
 }
 
 tfoot td:nth-child(1) h1 {
-  display: inline-block; 
+  display: inline-block;
   vertical-align: middle;
 }
 
-.ticket{
+.ticket {
   background-color: var(--color-segundary);
   margin-bottom: 10px;
   width: 100%;
@@ -324,11 +334,12 @@ tfoot td:nth-child(1) h1 {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.ticket h1{
+
+.ticket h1 {
   margin-left: 10px;
 }
 
-.container_button{
+.container_button {
   width: 100%;
   margin-top: 10px;
   display: flex;
@@ -337,27 +348,29 @@ tfoot td:nth-child(1) h1 {
 }
 
 .button_exit {
-  height: 50px; /* Definindo altura */
-  width: 50px; /* Definindo largura */
+  height: 50px;
+  /* Definindo altura */
+  width: 50px;
+  /* Definindo largura */
   font-weight: 600;
   font-family: var(--font-default);
   border: var(--border-default);
   background-color: #ff0000;
   color: var(--color-primary);
-  border-radius: 50%; 
+  border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s, transform 0.1s;
   text-align: center;
-  line-height: 50px; 
+  line-height: 50px;
   margin-right: 10px;
   font-size: 1.5rem;
-  padding: 0; 
+  padding: 0;
 }
 
 .button_exit:active {
-  background-color: #cc0000; 
-  transform: scale(0.95); 
+  background-color: #cc0000;
+  transform: scale(0.95);
 }
 
 .button_finish {
@@ -371,61 +384,115 @@ tfoot td:nth-child(1) h1 {
   color: var(--color-primary);
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.1s; /* Transição combinada */
+  transition: background-color 0.3s, transform 0.1s;
+  /* Transição combinada */
   text-align: center;
   line-height: 50px;
   font-size: 1.5rem;
 }
 
 .button_finish:active {
-  background-color: #023bc0fa; 
-  transform: scale(0.95); /* Efeito de pressionado */
+  background-color: #023bc0fa;
+  transform: scale(0.95);
+  /* Efeito de pressionado */
 }
 
-  @media screen and (max-width: 500px) {
-    .option {
-      flex-basis: 225px; /* Reduz a largura dos cards */
-      height: 380px; /* Mantém a altura automática para preservar a proporção */
-    }
+.janela_modal_sucesso {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000083;
+  display:none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal_sucesso {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffffff9;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px #00000098;
+  padding: 20px;
+  z-index: 1000;
+}
+.icon_sucesso{
+  width: 150px;
+  height: 150px ;
+}
+.mensagem_sucesso {
+  color: var(--color-segundary);
+  font-family: var(--font-default);
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+  .option {
+    flex-basis: 225px;
+    /* Reduz a largura dos cards */
+    height: 380px;
+    /* Mantém a altura automática para preservar a proporção */
+  }
 
   .kib,
   .coxinha,
   .bolinho-queijo {
-    width: 225px; /* Reduz a largura das imagens */
-    height: 200px; /* Reduz a altura das imagens */
+    width: 225px;
+    /* Reduz a largura das imagens */
+    height: 200px;
+    /* Reduz a altura das imagens */
   }
 
   .informations,
-  .sum{
+  .sum {
     font-size: 0.80rem;
   }
-  .mensagem_loading{
+
+  .mensagem_loading {
     font-size: 1.3rem;
   }
+  .mensagem_sucesso {
+    font-size: 1.4rem;
+  }
 }
-tr th{
-  color: var( --color-tertiary);   
+
+tr th {
+  color: var(--color-tertiary);
   font-size: 18px;
 }
-tr td{
-  color: var( --color-tertiary);   
+
+tr td {
+  color: var(--color-tertiary);
   font-size: 18px;
 }
-.trRow{
+
+.trRow {
   font-size: 22px;
   color: var(--color-tertiary);
   font-family: var(--font-calculate);
   font-weight: 400;
- }
- tr h2{
+}
+
+tr h2 {
   color: var(--color-tertiary);
   font-family: var(--font-calculate);
- }
-#valueTotal{
+}
+
+#valueTotal {
   color: var(--color-tertiary);
   font-family: var(--font-calculate);
 
 }
+
 /* Media Query para telas com largura máxima de 600px */
 @media screen and (max-width: 600px) {
   .janela_modal_checkout {
@@ -440,8 +507,10 @@ tr td{
 
   table {
     width: 100%;
-    table-layout: auto; /* Permite que as colunas redimensionem conforme necessário */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    table-layout: auto;
+    /* Permite que as colunas redimensionem conforme necessário */
+    overflow-x: auto;
+    /* Adiciona rolagem horizontal se necessário */
   }
 
   thead,
@@ -454,8 +523,10 @@ tr td{
   thead th,
   tbody td,
   tfoot td {
-    word-wrap: break-word; /* Quebra palavras longas */
-    white-space: normal; /* Permite a quebra de linha */
+    word-wrap: break-word;
+    /* Quebra palavras longas */
+    white-space: normal;
+    /* Permite a quebra de linha */
   }
 
   /* Ajustes específicos para colunas dentro da media query */
@@ -470,28 +541,33 @@ tr td{
   tbody td:nth-child(2),
   tfoot td:nth-child(2) {
     width: 20%;
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 
   thead th:nth-child(3),
   tbody td:nth-child(3),
   tfoot td:nth-child(3) {
     width: 20%;
-    font-size: 1rem; 
+    font-size: 1rem;
   }
-  #valueTotal{
-    font-size: 1rem; 
+
+  #valueTotal {
+    font-size: 1rem;
   }
-  .button_finish{
-    font-size: 1rem; 
+
+  .button_finish {
+    font-size: 1rem;
   }
-  .ticket h1{
-    font-size: 1rem; 
+
+  .ticket h1 {
+    font-size: 1rem;
   }
-  .button_exit{
-    height: 30px; /* Definindo altura */
+
+  .button_exit {
+    height: 30px;
+    /* Definindo altura */
     width: 30px;
-    font-size: 1rem; 
-    line-height: 32px; 
+    font-size: 1rem;
+    line-height: 32px;
   }
 }

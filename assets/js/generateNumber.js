@@ -7,7 +7,23 @@ function catchNumber(){
  newNumber+=1;
  
  document.getElementById("numberGenerate").innerText=`#0${newNumber}`;
- document.getElementById("janela_modal_checkout").style.display="none";
+
+ //FECHANDO A TABELA MODAL E TRAZENDO MODAL SUCESSO
+ const modalChekout = document.getElementById("janela_modal_checkout");
+ const modalSucesso = document.getElementById("janela_modal_sucesso");
+ const time = 12000;
+
+ modalChekout.style.display = "none"
+
+ if (modalChekout.style.display === "none") {
+
+    modalSucesso.style.display = "flex"
+ }
+
+ function finishLoading(){
+  modalSucesso.style.display = "none"
+ }
+ setTimeout(finishLoading, time);
  
  //ZERANDO NÚMERO DOS ITENS
  document.getElementById("number-kib").innerText="0";
