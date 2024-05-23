@@ -1,9 +1,8 @@
 export function sumValues(){
   
   const h3TotalKib = document.getElementById("total-valor-kib").innerText;
-  console.log(h3TotalKib);
   const valorKib = parseFloat(h3TotalKib.slice(3));//convertendo string para float
- console.log(valorKib);
+
  const h3TotalCoxinha = document.getElementById("total-valor-coxinha").innerText;
  const valorCoxinha = parseFloat(h3TotalCoxinha.slice(3));//convertendo string para float
  const h3TotalQueijo = document.getElementById("total-valor-queijo").innerText;
