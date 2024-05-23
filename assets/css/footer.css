@@ -55,13 +55,13 @@
 
 .total {
   border-radius: 5px; /* Borda levemente arredondada */
-  border: double 3px;
-  background-color:#CCE7E8; /* Fundo verde-azulado claro */
+  border: double 3px var(--color-primary);
+  background-color: var(--color-segundary);
   margin-top: 6px;
 }
 .total h1{
   font-family: var(--font-calculate);
-  color: #000000; 
+  color: var(--color-primary);
   font-family: 'Seven Segment', sans-serif; 
   font-size: 2em;
   display: flex;
@@ -96,14 +96,14 @@
   }
 
   .total {
-    height: 50px;
+    height: 65px;
     width: 230px;
-    font-size: 0.80rem; 
+    font-size: 0.90rem; 
   }
 
   .btn {
     width:100%;
-    padding: 1px;
+    padding: 2px;
   }
 }
 

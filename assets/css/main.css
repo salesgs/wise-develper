@@ -65,6 +65,7 @@
 
 .sum h1 {
   color: var(--color-tertiary);
+  font-family: var(--font-calculate);
   font-weight: 600;
 }
 
@@ -90,8 +91,9 @@
   width: 30%;
   font-size: 1.2rem;
   text-align: center;
-  border: 3px double black;
-  background-color: #CCE7E8;
+  border: double 3px var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-segundary);
 }
 
 .increment,
@@ -380,7 +382,7 @@ tfoot td:nth-child(1) h1 {
   font-weight: 600;
   font-family: var(--font-default);
   background-color: var(--color-segundary);
-  border: var(--border-default);
+  border: double 3px var(--color-primary);
   color: var(--color-primary);
   cursor: pointer;
   text-decoration: none;
@@ -404,7 +406,7 @@ tfoot td:nth-child(1) h1 {
   top: 0;
   left: 0;
   background-color: #00000083;
-  display:none;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 999;
@@ -424,10 +426,12 @@ tfoot td:nth-child(1) h1 {
   padding: 20px;
   z-index: 1000;
 }
-.icon_sucesso{
+
+.icon_sucesso {
   width: 150px;
-  height: 150px ;
+  height: 150px;
 }
+
 .mensagem_sucesso {
   color: var(--color-segundary);
   font-family: var(--font-default);
@@ -437,16 +441,16 @@ tfoot td:nth-child(1) h1 {
 
 @media screen and (max-width: 500px) {
   .option {
-    flex-basis: 225px;
+    flex-basis: 240px;
     /* Reduz a largura dos cards */
-    height: 380px;
+    height: 400px;
     /* Mantém a altura automática para preservar a proporção */
   }
 
   .kib,
   .coxinha,
   .bolinho-queijo {
-    width: 225px;
+    width: 240px;
     /* Reduz a largura das imagens */
     height: 200px;
     /* Reduz a altura das imagens */
@@ -454,14 +458,15 @@ tfoot td:nth-child(1) h1 {
 
   .informations,
   .sum {
-    font-size: 0.80rem;
+    font-size: 1rem;
   }
 
   .mensagem_loading {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
+
   .mensagem_sucesso {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -497,6 +502,7 @@ tr h2 {
 @media screen and (max-width: 600px) {
   .janela_modal_checkout {
     justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -533,41 +539,49 @@ tr h2 {
   thead th:nth-child(1),
   tbody td:nth-child(1),
   tfoot td:nth-child(1) {
-    width: 60%;
-    font-size: 1rem;
+    width: 13%;
+    font-size: 1.5rem;
   }
 
   thead th:nth-child(2),
   tbody td:nth-child(2),
   tfoot td:nth-child(2) {
-    width: 20%;
-    font-size: 1rem;
+    width: 10%;
+    font-size: 1.5rem;
   }
 
   thead th:nth-child(3),
   tbody td:nth-child(3),
   tfoot td:nth-child(3) {
-    width: 20%;
-    font-size: 1rem;
+    width: 10%;
+    font-size: 1.5rem;
   }
 
   #valueTotal {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .container_button {
+    width: 100%;
   }
 
   .button_finish {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .ticket h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .button_exit {
-    height: 30px;
+    height: 40px;
     /* Definindo altura */
-    width: 30px;
-    font-size: 1rem;
-    line-height: 32px;
+    width: 40px;
+    font-size: 1.5rem;
+    line-height: 42px;
+  }
+
+  tfoot td:nth-child(1) {
+    white-space: nowrap;
   }
 }
