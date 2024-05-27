@@ -8,35 +8,12 @@ import { decrementQueijo } from "./queijo.js";
 import { activeLoadingModal } from "./modalRedirecionamento.js";
 import { disableModalCheckout } from "./modalCheckout.js";
 
-// KIB
-const incrementKibImg = document.getElementById("incrementKibImg");
-const decrementKibImg = document.getElementById("decrementKibImg");
-decrementKibImg.addEventListener("click",decrementKib);
-incrementKibImg.addEventListener("click",incrementKib);
-//----------------------------------------------------------
+document.getElementById("incrementKibImg").addEventListener("click",incrementKib);  document.getElementById("decrementKibImg").addEventListener("click",decrementKib);
 
-// Coxinha
-const incrementCoxinhaImg = document.getElementById("incrmenetCoxinha");
-const decrementCoxinhaImg = document.getElementById("decrementCoxinha");
+document.getElementById("incrmenetCoxinha").addEventListener("click",incrementCoxinha);
+document.getElementById("decrementCoxinha").addEventListener("click",decrementCoxinha);
 
-incrementCoxinhaImg.addEventListener("click",incrementCoxinha);
-decrementCoxinhaImg.addEventListener("click", decrementCoxinha);
-//----------------------------------------------------------
+document.getElementById("incrmentQueijoImg").addEventListener("click",incrmentQueijo);
+document.getElementById("decrementQueijoImg").addEventListener("click",decrementQueijo);
 
-// Queijo
-const incrementQueijoImg = document.getElementById("incrmentQueijoImg");
-const decrementQueijoImg = document.getElementById("decrementQueijoImg");
-
-incrementQueijoImg.addEventListener("click",incrmentQueijo);
-decrementQueijoImg.addEventListener("click",decrementQueijo);
-//----------------------------------------------------------
-
-//Modal btn Proximo
-const modalLodding = document.getElementById("buttonNext");
-const modalCheckout = document.getElementById("button_exit");
-//----------------------------------------------------------
-
-//Modal btn Checkout
-modalLodding.addEventListener("click", activeLoadingModal);
-modalCheckout.addEventListener("click", disableModalCheckout );
-
+document.getElementById("buttonNext").addEventListener("click", activeLoadingModal); document.getElementById("button_exit").addEventListener("click", disableModalCheckout);
