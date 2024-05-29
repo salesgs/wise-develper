@@ -6,9 +6,10 @@ export function validNextButton(){
   let numberKib = new Number(numberStringKib);
   let numberStringQueijo = document.getElementById("number-queijo").innerText;
   let numberQueijo  = new Number(numberStringQueijo);
+  
   if(numberKib>0 || numberCoxihna >0 || numberQueijo > 0){
    valid = true;
- }
+  }
  return valid;
 }
 

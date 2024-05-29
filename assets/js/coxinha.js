@@ -2,30 +2,22 @@ import {sumValues}from "./sumTotal.js";
 import { validNextButton } from "./valid.js";
 import { validNextButtonDecrement } from "./valid.js";
 
-export function incrementCoxinha() {
-  const h1 = document.getElementById("number-coxinha");
-  const h2 = document.getElementById("valor-coxinha");
-  const h3 = document.getElementById("total-valor-coxinha");
-  let numberString = h1.innerText;//Armazenando a o Texto do H1  => "String"
-  
-  let numberCoxinha = parseInt(numberString);//CONVERSÃO DO TEXTO DO H1 PARA NUMÉRO
-  const unitValue = 0.50;//PREÇO DA PEÇA
-  let formattedUnitValue = unitValue.toFixed(2);//FORMATANDO O VALOR
+export function incrementCoxinha() {  
+  let numberCoxinha = parseInt(document.getElementById("number-coxinha").innerText);
+  const unitValue = 0.50;  
+  const formattedUnitValue = unitValue.toFixed(2);
   numberCoxinha++;
-  h1.innerText = `${numberCoxinha}`;//SOMA A CADA CLICK
-  let formattedTotalValue = numberCoxinha === 1 ? unitValue.toFixed(2) : (unitValue * numberCoxinha).toFixed(2);//VALIDAÇÃO QUANDO CHEGAR A ZERO E DECREMENT DO VALOR TOTAL
-  h2.innerText = "Unidade R$:" + formattedUnitValue;//ATRIBUINDO O VALOR NO HTML
-  h3.innerText = "R$:" + formattedTotalValue;//ATRIBUINDO VALOR TOTAL NO HTML
+  document.getElementById("number-coxinha").innerText = `${numberCoxinha}`;
+  const formattedTotalValue = numberCoxinha === 1 ? unitValue.toFixed(2):(unitValue * numberCoxinha).toFixed(2);
+  document.getElementById("valor-coxinha").innerText = "Unidade R$:" + formattedUnitValue;
+  document.getElementById("total-valor-coxinha") .innerText = "R$:" + formattedTotalValue;
   sumValues();
-  //VALIDAÇÃO PARA LIBERAR O BOTÃO 
-  
-  let valid = validNextButton();
-  if(valid){
-    let button = document.getElementById("buttonNext");
-    button.style.display="block";
-    button.style.backgroundColor="#0047c9";
+   
+  const valid = validNextButton();
+  if(valid==true){
+    document.getElementById("buttonNext").style.display="block";
+    document.getElementById("buttonNext").style.backgroundColor="#0047c9";
   }
-
 }
 
 export function decrementCoxinha() {
