@@ -40,5 +40,5 @@ export function decrementQueijo() {
   if(valid == false){
     let button = document.getElementById("buttonNext");
     button.style.display="none";
- }
+  }
 } 
